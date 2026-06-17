@@ -1,43 +1,63 @@
 import { Link, useLocation } from 'react-router-dom'
+import { useAuth } from '../auth/AuthContext';
+import { useTheme } from "../auth/ThemeContext";
+import NavLinks from './NavLinks';
 
+const style = {
+    wrapper: "bg-background text-foreground h-16 w-full shadow-lg px-2 flex justify-between items-center border dark:border-b-gray-700",
+    text: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10",
+    button: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10 lg:hidden"
+}
 
-const Navbar = () => {
+const Navbar = ({ setSlide }) => {
     const location = useLocation();
+    const { isAuthenticated } = useAuth();
+    const { theme, toggleTheme } = useTheme();
 
-    const isUserPage = location.pathname === "/";
+    const isUserPage = !location.pathname.startsWith("/adminhome"); // ← all non-admin pages
     const isAdminPage = location.pathname.startsWith("/adminhome");
 
     return (
         <>
-            {isUserPage && !isAdminPage && (
-                <nav className="fixed text-black text-2xl top-0 left-0 w-full bg-transparent backdrop-blur-xl z-50 justify-between text-center flex">
-                    <div className=' font-bold flex gap-6 p-4'>
-                        <Link to="/">NepalFlow</Link>
-                    </div>
-                    <div className='flex gap-6 p-4'>
-                        <Link to="/historical">Historical</Link>
-                        <Link to="/forecast">Forecast</Link>
-                        <Link to="/Comparison">Comparison</Link>
-                        <div className='flex-1 flex md:justify-end text-sm items-center lg:text-base'>
-                            <Link to="/login" className='hover:bg-yellow-200 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300 active:bg-amber-300 ring  text-left'> Login </Link>
+            <div className={style.wrapper}>
+
+
+                {isAdminPage ? (
+                    <>
+                        <Link to="/adminhome" className='flex items-center'>
+                            TFlow Control Center
+                        </Link>
+
+                        <div className='hidden lg:flex gap-6'>
+                            <Link to="/adminupload" className='hover:bg-yellow-200 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300 active:bg-amber-300 ring  text-left'> Upload Dataset </Link>
+                            <Link to="/adminverify"> Verify Dataset</Link>
                         </div>
-                    </div>
-                </nav>
-            )}
-
-            {isAdminPage && (
-                <nav className='bg-slate-900 text-black overflow-x-auto items-center'>
-                    <div className='flex p-2 px-6 items-center'>
-                        <div className=' mr-8 font-bold text-sm '>
-                            <Link to="/adminhome">TFlow Control Center</Link></div>
-
-                        <div className='flex-1 flex md:justify-end text-sm items-center lg:text-base'>
-                            <Link to="/" className='hover:bg-yellow-200 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300 active:bg-amber-300 ring  text-left'> Exit to Public View</Link>
+                        <button className={style.button} onClick={() => setSlide(true)}>Menu</button>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/" className='flex items-center'>
+                            NepalFlow
+                        </Link>
+                        <div className="hidden lg:flex gap-6">
+                            <NavLinks />
                         </div>
-                    </div>
-                </nav>
-            )}
+                        <button className={style.button} onClick={() => setSlide(true)}>Menu</button>
+                    </>
+                )}
 
+                <div className="flex gap-2 lg:gap-5">
+                    <button onClick={toggleTheme} className="text-foreground hover:text-orange-400">
+                        {theme === 'dark' ? "☀️" : "🌑"}
+                    </button>
+
+                    {!isAuthenticated ?
+                        (<Link to="/login" className={style.text}>Sign In</Link>)
+                        :
+                        (<Link to="/logout" className={style.text}>Logout</Link>)
+                    }
+                </div>
+            </div>
         </>
     )
 }

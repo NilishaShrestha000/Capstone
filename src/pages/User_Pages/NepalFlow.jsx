@@ -1,7 +1,7 @@
 
 const NepalFlow = () => {
     return (
-        <div >
+        <div className="bg-background text-foreground">
             Home page for user
         </div>
     )
