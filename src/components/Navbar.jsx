@@ -4,7 +4,7 @@ import { useTheme } from "../auth/ThemeContext";
 import NavLinks from './NavLinks';
 
 const style = {
-    wrapper: "bg-background text-foreground h-16 w-full shadow-lg px-2 flex justify-between items-center border dark:border-b-gray-700",
+    wrapper: "bg-background text-foreground h-16 w-full shadow-lg px-2 flex justify-between items-center border-b border-b-gray-500",
     text: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10",
     button: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10 lg:hidden"
 }
