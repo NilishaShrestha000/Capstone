@@ -33,10 +33,10 @@ const router = createBrowserRouter([
             { path: "forecast", element: <Forecast /> },
             { path: "comparison", element: <Comparison /> },
             { path: "login", element: <Login /> },
-            { path: "logout", element: (<ProtectedRoute><Logout /></ProtectedRoute>) },
-            { path: "adminhome", element: (<ProtectedRoute><AdminHome /></ProtectedRoute>) },
-            { path: "adminupload", element: (<ProtectedRoute><AdminUpload /></ProtectedRoute>) },
-            { path: "adminverify", element: (<ProtectedRoute><AdminVerify /></ProtectedRoute>) },
+            { path: "logout", element: <Logout /> },
+            { path: "adminhome", element: <AdminHome /> },
+            { path: "adminupload", element: <AdminUpload /> },
+            { path: "adminverify", element: <AdminVerify /> },
 
             // Footer Routes
             { path: "aboutus", element: <AboutUs /> },

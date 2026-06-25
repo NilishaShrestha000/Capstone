@@ -17,7 +17,7 @@ const style = {
     title: "text-xl lg:text-2xl font-semibold",
     describe: "cdtext-md lg:text-lg text-gray-700 dark:text-gray-300 font-semibold",
     namewrapper: "gap-5 lg:gap-10 mt-10 mb-10 justify-center grid grid-cols-1 md:grid-cols-3 min-[850px]:grid-cols-4 lg:grid-cols-5  px-10",
-    link:"border border-gray-500 px-2 py-1 rounded-lg bg-gray-400/50 hover:scale-[1.05] duration-300 flex gap-1 items-center"
+    link: "border border-gray-500 px-2 py-1 rounded-lg bg-gray-400/50 hover:scale-[1.05] duration-300 flex gap-1 items-center"
 }
 
 const techstack = [
@@ -126,7 +126,7 @@ const AboutUs = () => {
                     </div>
                     <div className={`${style.linkbox}  flex flex-col items-center`}>
                         <p className={`${style.icon} bg-blue-300/50 rounded-full h-15 w-15`}>BY</p>
-                        <p className={style.title}>Barsha Yadhav</p>
+                        <p className={style.title}>Barsha Yadav</p>
                         <p className={style.describe}>Frontend & QA</p>
                     </div>
                 </div>

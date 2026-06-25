@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import Navbar from "./Navbar"
 import Footer from "./Footer";
 import { useState } from "react";
@@ -6,6 +6,9 @@ import NavLinks from "./NavLinks";
 
 function Layout() {
     const [slide, setSlide] = useState(false);
+    const location = useLocation();
+    const isAdmin = location.pathname.startsWith("/admin");
+
     return (
         <>
             <Navbar setSlide={setSlide} />
@@ -24,7 +27,7 @@ function Layout() {
                     ✕
                 </button>
                 <div className="flex flex-col gap-4 mt-16 px-6">
-                    <NavLinks />
+                    <NavLinks isMobile={true} isAdmin={isAdmin} closeMenu={() => setSlide(false)} />
                 </div>
             </div>
             <main>

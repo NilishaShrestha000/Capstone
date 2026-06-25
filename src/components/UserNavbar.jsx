@@ -1,31 +1,26 @@
 import { Link } from 'react-router-dom'
 import { useTheme } from "../auth/ThemeContext";
+import NavLinks from './NavLinks';
 
 const style = {
     wrapper: "bg-background text-foreground h-16 w-full shadow-lg px-4 flex justify-between items-center border-b border-b-gray-500",
     menuButton: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10 lg:hidden",
-    logoutBtn: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10",
-    navLink: "text-foreground hover:text-orange-400 font-medium transition-colors",
+    loginBtn: "flex text-foreground hover:text-orange-400 font-semibold items-center cursor-pointer border border-gray-300 hover:border-orange-400 rounded-2xl px-4 py-5 h-10",
 }
 
-const AdminNavbar = ({ setSlide }) => {
+const UserNavbar = ({ setSlide }) => {
     const { theme, toggleTheme } = useTheme();
 
     return (
         <div className={style.wrapper}>
             {/* Logo */}
-            <Link to="/adminhome" className="flex items-center font-bold text-lg">
-                NepalFlow Control Center
+            <Link to="/" className="flex items-center font-bold text-lg">
+                NepalFlow
             </Link>
 
-            {/* Desktop admin nav links */}
+            {/* Desktop nav links */}
             <div className="hidden lg:flex gap-6">
-                <Link to="/adminupload" className={style.navLink}>
-                    Upload Dataset
-                </Link>
-                <Link to="/adminverify" className={style.navLink}>
-                    Verify Dataset
-                </Link>
+                <NavLinks />
             </div>
 
             {/* Right side controls */}
@@ -34,8 +29,8 @@ const AdminNavbar = ({ setSlide }) => {
                     {theme === 'dark' ? "☀️" : "🌑"}
                 </button>
 
-                <Link to="/logout" className={style.logoutBtn}>
-                    Logout
+                <Link to="/login" className={style.loginBtn}>
+                    Login As Admin
                 </Link>
 
                 {/* Mobile menu toggle */}
@@ -47,4 +42,4 @@ const AdminNavbar = ({ setSlide }) => {
     )
 }
 
-export default AdminNavbar;
+export default UserNavbar;
