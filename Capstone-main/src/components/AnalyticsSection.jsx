@@ -1,34 +1,109 @@
 import React from "react";
+import { BarChart3, TrendingUp, Map } from "lucide-react";
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  AreaChart,
+  Area,
+  XAxis,
+} from "recharts";
 
 const AnalyticsSection = () => {
-  // Define features data parsed directly from the mockup image
+  // Mock datasets tailored for each card's prediction focus
+  const historicalData = [
+    { year: "2022", visitors: 40 },
+    { year: "2023", visitors: 55 },
+    { year: "2024", visitors: 65 },
+    { year: "2025", visitors: 95 },
+  ];
+
+  const forecastData = [
+    { month: "Jan", count: 30 },
+    { month: "Feb", count: 45 },
+    { month: "Mar", count: 60 },
+    { month: "Apr", count: 90 },
+    { month: "May", count: 75 },
+    { month: "Jun", count: 110 },
+  ];
+
+  const mapData = [
+    { region: "KTM", flow: 50 },
+    { region: "PKR", flow: 70 },
+    { region: "LUM", flow: 60 },
+    { region: "SOL", flow: 100 },
+  ];
+
   const features = [
     {
       title: "Historical Data",
       description: "Track Visitor Trends Over the Years",
-      // Placeholder illustration element or emoji/icon wrapper
-      image: "logo.png",
-      bgColor: "from-blue-50 to-indigo-50",
+      icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
+      bgColor: "from-blue-50 to-indigo-100",
+      chart: (
+        <ResponsiveContainer width="90%" height="75%">
+          <BarChart data={historicalData} margin={{ bottom: -10 }}>
+            <Bar
+              dataKey="visitors"
+              fill="#3b82f6"
+              radius={[4, 4, 0, 0]}
+              opacity={0.75}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      ),
     },
     {
       title: "Predictive Tools",
       description: "Forecast Future Arrivals",
-      image: "logo.png",
-      bgColor: "from-sky-50 to-emerald-50",
+      icon: <TrendingUp className="w-8 h-8 text-sky-600" />,
+      bgColor: "from-sky-50 to-blue-100",
+      chart: (
+        <ResponsiveContainer width="90%" height="75%">
+          <AreaChart data={forecastData} margin={{ bottom: -10 }}>
+            <defs>
+              <linearGradient id="colorForecast" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#0ea5e9" stopOpacity={0.4} />
+                <stop offset="95%" stopColor="#0ea5e9" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="count"
+              stroke="#0ea5e9"
+              strokeWidth={2}
+              fillOpacity={1}
+              fill="url(#colorForecast)"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      ),
     },
     {
       title: "Interactive Maps",
       description: "Visualize Regional Tourism Flow",
-      image: "logo.png",
-      bgColor: "from-teal-50 to-emerald-50",
+      icon: <Map className="w-8 h-8 text-teal-600" />,
+      bgColor: "from-teal-50 to-emerald-100",
+      chart: (
+        <ResponsiveContainer width="90%" height="75%">
+          <BarChart data={mapData} margin={{ bottom: -10 }}>
+            <Bar
+              dataKey="flow"
+              fill="#0d9488"
+              radius={[4, 4, 0, 0]}
+              opacity={0.7}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      ),
     },
   ];
 
   return (
     <section className="w-full py-16 px-6 md:px-16 bg-slate-200 relative overflow-hidden">
-      {/* Subtle faint mountain background opacity trick to match image aesthetics */}
+      {/* Mountain background container */}
       <div
-        className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none"
+        className="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none"
         style={{ backgroundImage: "url('nflow.jpg')" }}
       ></div>
 
@@ -59,23 +134,17 @@ const AnalyticsSection = () => {
                 {feature.description}
               </p>
 
-              {/* --- IMAGE / ILLUSTRATION PLACEHOLDER AREA --- */}
-              {/* This mimics the layout box containing the charts/graphics from the user's mockup image */}
+              {/* --- IMAGE / CHART AREA --- */}
               <div
-                className={`w-full h-48 rounded-xl bg-gradient-to-br ${feature.bgColor} flex items-center justify-center border border-slate-50 shadow-inner overflow-hidden relative`}
+                className={`w-full h-48 rounded-xl bg-gradient-to-br ${feature.bgColor} flex flex-col items-center justify-end pb-2 border border-slate-100 shadow-inner overflow-hidden relative`}
               >
-                {/* Graphics Mockup Core (Replace with actual <img> or Charts if required) */}
-                <span className="text-5xl filter drop-shadow opacity-80 transform group-hover:scale-110 transition-transform duration-300">
+                {/* Floating Core Action Icon */}
+                <div className="absolute top-4 bg-white/80 backdrop-blur-xs p-2 rounded-lg shadow-xs transform group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
-                </span>
-
-                {/* Simulated Chart Bars/Lines decoration */}
-                <div className="absolute bottom-2 left-0 right-0 h-2 px-4 flex items-end gap-1 justify-center opacity-30">
-                  <div className="w-full h-8 bg-blue-500 rounded-t-sm"></div>
-                  <div className="w-full h-12 bg-blue-500 rounded-t-sm"></div>
-                  <div className="w-full h-16 bg-blue-500 rounded-t-sm"></div>
-                  <div className="w-full h-24 bg-blue-500 rounded-t-sm"></div>
                 </div>
+
+                {/* Rendered Live Functional Recharts Micrograph */}
+                {feature.chart}
               </div>
             </div>
           ))}
