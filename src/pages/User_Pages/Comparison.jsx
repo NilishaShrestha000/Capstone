@@ -1,14 +1,16 @@
+
 import { useMemo, useState } from "react";
 import {
   Chart as ChartJS, CategoryScale, LinearScale, PointElement,
-  LineElement, BarElement, Filler, Tooltip, Legend,
+  LineElement, Filler, Tooltip, Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
-import { FaChartBar, FaBalanceScale } from "react-icons/fa";
+import { Line } from "react-chartjs-2";
+import { FaChartLine, FaBalanceScale } from "react-icons/fa";
 import { useTheme } from "../../auth/ThemeContext";
 import data from "../../data/historicaldata.json";
+import forecastData from "../../data/forecastdata.json";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Filler, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 const style = {
   card: "bg-background text-foreground border border-gray-500/40 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-300",
@@ -20,38 +22,18 @@ const style = {
   select: "bg-background text-foreground border border-gray-500/40 rounded-xl px-3 py-2 text-sm focus:border-orange-400 outline-none",
 };
 
-const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const SCENARIOS = {
-  conservative: { label: "Conservative", growth: 0.03 },
-  base:         { label: "Base Case",    growth: 0.074 },
-  optimistic:   { label: "Optimistic",   growth: 0.12 },
-};
-
-// Same placeholder model as the Forecast page — seasonal baseline × compounded growth.
-function computeForecast(monthlyArrivals, scenarioKey, yearsAhead, startYear) {
-  const scenario = SCENARIOS[scenarioKey];
-  const recentYears = monthlyArrivals.filter((d) => d.year >= 2019 && d.year !== 2020 && d.year !== 2021);
-  const baseline = months.map((m) => {
-    const vals = recentYears.map((y) => y[m] || 0);
-    return vals.reduce((a, b) => a + b, 0) / vals.length;
-  });
-
-  const yearlyForecasts = [];
-  for (let i = 0; i < yearsAhead; i++) {
-    const compounded = Math.pow(1 + scenario.growth, i + 1);
-    const monthly = baseline.map((v) => v * compounded);
-    yearlyForecasts.push({ year: startYear + i, monthly, total: monthly.reduce((a, b) => a + b, 0) });
-  }
-  return { baseline, yearlyForecasts, scenario };
-}
+// How many recent actual years of monthly detail to show flowing into the forecast
+const MONTHLY_HISTORY_YEARS = 3;
 
 function usePalette(theme) {
   return useMemo(() => {
     const isDark = theme === "dark";
     return {
       accent: "#fb923c",
-      historical: isDark ? "#6b7280" : "#9ca3af",
+      historical: isDark ? "#9ca3af" : "#6b7280",
+      band: "rgba(251,146,60,0.12)",
       grid: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
       text: isDark ? "#9ca3af" : "#4b5563",
       tooltipBg: isDark ? "#1f1f22" : "#ffffff",
@@ -75,48 +57,27 @@ const Comparison = () => {
   const palette = usePalette(theme);
   const { arrivalsByYear, monthlyArrivals } = data;
 
-  const [scenarioKey, setScenarioKey] = useState("base");
   const [historyRange, setHistoryRange] = useState(10);
 
-  const latestYear = Math.max(...monthlyArrivals.map((d) => d.year));
-  const startYear = latestYear + 1;
+  const forecastYears = useMemo(() => {
+    if (!forecastData?.forecasts) return {};
+    const byYear = {};
+    forecastData.forecasts.forEach((f) => {
+      if (!byYear[f.year]) byYear[f.year] = [];
+      byYear[f.year].push(f);
+    });
+    return byYear;
+  }, []);
 
-  const { baseline, yearlyForecasts, scenario } = useMemo(
-    () => computeForecast(monthlyArrivals, scenarioKey, 2, startYear),
-    [monthlyArrivals, scenarioKey, startYear]
+  const forecastYearKeys = useMemo(
+    () => Object.keys(forecastYears).map(Number).sort((a, b) => a - b),
+    [forecastYears]
   );
-
-  const nextYearForecast = yearlyForecasts[0];
-
-  // --- Chart 1: monthly shape, historical seasonal avg vs next-year forecast ---
-  const monthlyComparisonData = {
-    labels: months,
-    datasets: [
-      { label: `Historical Avg (2019, '22–'24)`, data: baseline, backgroundColor: palette.historical },
-      { label: `${nextYearForecast.year} Forecast (${scenario.label})`, data: nextYearForecast.monthly, backgroundColor: palette.accent },
-    ],
-  };
-
-  // --- Chart 2: yearly totals, historical bars flowing into forecast bars ---
-  const recentHistory = arrivalsByYear.slice(-historyRange);
-  const yearlyLabels = [...recentHistory.map((d) => d.year), ...yearlyForecasts.map((d) => d.year)];
-  const historicalTotals = [...recentHistory.map((d) => d.total), ...yearlyForecasts.map(() => null)];
-  const forecastTotals = [...recentHistory.map(() => null), ...yearlyForecasts.map((d) => d.total)];
-  // bridge point so the two series visually connect at the boundary year
-  historicalTotals[recentHistory.length - 1] = recentHistory[recentHistory.length - 1].total;
-  forecastTotals[recentHistory.length - 1] = recentHistory[recentHistory.length - 1].total;
-
-  const yearlyTimelineData = {
-    labels: yearlyLabels,
-    datasets: [
-      { label: "Historical (Actual)", data: historicalTotals, backgroundColor: palette.historical },
-      { label: `Forecast (${scenario.label})`, data: forecastTotals, backgroundColor: palette.accent },
-    ],
-  };
 
   const baseOptions = {
     responsive: true,
     maintainAspectRatio: false,
+    interaction: { mode: "index", intersect: false },
     plugins: {
       legend: { labels: { color: palette.text, boxWidth: 12 } },
       tooltip: {
@@ -125,16 +86,142 @@ const Comparison = () => {
         bodyColor: palette.tooltipText,
         borderColor: "rgba(251,146,60,0.3)",
         borderWidth: 1,
+        filter: (item) => item.dataset.label !== "Confidence Band",
       },
     },
     scales: {
-      x: { grid: { color: palette.grid }, ticks: { color: palette.text } },
+      x: { grid: { color: palette.grid }, ticks: { color: palette.text, maxRotation: 45, minRotation: 0, autoSkip: true } },
       y: { grid: { color: palette.grid }, ticks: { color: palette.text } },
     },
   };
 
-  const pctDiff = ((nextYearForecast.total / recentHistory[recentHistory.length - 1].total - 1) * 100).toFixed(1);
-  const peakMonthIdx = nextYearForecast.monthly.indexOf(Math.max(...nextYearForecast.monthly));
+  if (!forecastData?.forecasts?.length || forecastYearKeys.length === 0) {
+    return (
+      <div className="bg-background text-foreground min-h-screen flex items-center justify-center">
+        <p className="text-sm text-red-400">No forecast data available.</p>
+      </div>
+    );
+  }
+
+  const { annual_totals, model } = forecastData;
+  const firstForecastYear = forecastYearKeys[0];
+  const lastForecastYear = forecastYearKeys[forecastYearKeys.length - 1];
+  const lastActualYear = Math.max(...arrivalsByYear.map((d) => d.year));
+
+  // ================= Monthly view: recent actual months flowing straight into forecast months =================
+  const recentActualMonthly = monthlyArrivals
+    .filter((d) => d.year > lastActualYear - MONTHLY_HISTORY_YEARS && d.year <= lastActualYear)
+    .sort((a, b) => a.year - b.year);
+
+  const histLabels = recentActualMonthly.flatMap((row) =>
+    months.map((m) => `${m} '${String(row.year).slice(2)}`)
+  );
+  const histValues = recentActualMonthly.flatMap((row) => months.map((m) => row[m] || 0));
+
+  const fcLabels = forecastData.forecasts.map((f) => f.label);
+  const fcValues = forecastData.forecasts.map((f) => f.forecast);
+  const fcUpper = forecastData.forecasts.map((f) => f.upper);
+  const fcLower = forecastData.forecasts.map((f) => f.lower);
+
+  const monthlyLabels = [...histLabels, ...fcLabels];
+  const bridgeVal = histValues[histValues.length - 1];
+
+  // historical series: real values, then nulls across the forecast horizon
+  const monthlyHistorical = [...histValues, ...fcValues.map(() => null)];
+  // forecast series: nulls across history, bridge point at the boundary, then forecast values
+  const monthlyForecast = [...histValues.map(() => null), ...fcValues];
+  monthlyForecast[histValues.length - 1] = bridgeVal; // stitch the two lines together visually
+  // confidence band only exists across the forecast horizon
+  const monthlyUpper = [...histValues.map(() => null), ...fcUpper];
+  const monthlyLower = [...histValues.map(() => null), ...fcLower];
+  monthlyUpper[histValues.length - 1] = bridgeVal;
+  monthlyLower[histValues.length - 1] = bridgeVal;
+
+  const monthlyTimelineData = {
+    labels: monthlyLabels,
+    datasets: [
+      {
+        label: "Confidence Band",
+        data: monthlyUpper,
+        borderColor: "transparent",
+        backgroundColor: palette.band,
+        fill: "+1",
+        pointRadius: 0,
+        tension: 0.3,
+      },
+      {
+        label: "Confidence Band",
+        data: monthlyLower,
+        borderColor: "transparent",
+        backgroundColor: palette.band,
+        fill: false,
+        pointRadius: 0,
+        tension: 0.3,
+      },
+      {
+        label: `Historical (${recentActualMonthly[0]?.year}–${lastActualYear})`,
+        data: monthlyHistorical,
+        borderColor: palette.historical,
+        backgroundColor: palette.historical,
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.3,
+        fill: false,
+      },
+      {
+        label: `Forecast (${model})`,
+        data: monthlyForecast,
+        borderColor: palette.accent,
+        backgroundColor: palette.accent,
+        borderWidth: 2,
+        borderDash: [6, 4],
+        pointRadius: 0,
+        tension: 0.3,
+        fill: false,
+      },
+    ],
+  };
+
+  // ================= Yearly view: same continuous-line treatment =================
+  const recentHistory = arrivalsByYear.slice(-historyRange);
+  const yearlyLabels = [...recentHistory.map((d) => d.year), ...forecastYearKeys];
+  const yearlyBridge = recentHistory[recentHistory.length - 1].total;
+
+  const yearlyHistorical = [...recentHistory.map((d) => d.total), ...forecastYearKeys.map(() => null)];
+  const yearlyForecast = [...recentHistory.map(() => null), ...forecastYearKeys.map((y) => annual_totals[String(y)])];
+  yearlyForecast[recentHistory.length - 1] = yearlyBridge;
+
+  const yearlyTimelineData = {
+    labels: yearlyLabels,
+    datasets: [
+      {
+        label: "Historical (Actual)",
+        data: yearlyHistorical,
+        borderColor: palette.historical,
+        backgroundColor: palette.historical,
+        borderWidth: 2,
+        pointRadius: 3,
+        tension: 0.25,
+        fill: false,
+      },
+      {
+        label: `Forecast (${model})`,
+        data: yearlyForecast,
+        borderColor: palette.accent,
+        backgroundColor: palette.accent,
+        borderWidth: 2,
+        borderDash: [6, 4],
+        pointRadius: 3,
+        tension: 0.25,
+        fill: false,
+      },
+    ],
+  };
+
+  const firstForecastTotal = annual_totals[String(firstForecastYear)];
+  const lastActualTotal = recentHistory[recentHistory.length - 1].total;
+  const pctDiff = ((firstForecastTotal / lastActualTotal - 1) * 100).toFixed(1);
+  const peakMonthEntry = forecastData.forecasts.reduce((a, b) => (b.forecast > a.forecast ? b : a));
 
   return (
     <div className="bg-background text-foreground min-h-screen">
@@ -150,16 +237,11 @@ const Comparison = () => {
             Historical vs Forecast
           </h1>
           <p className="text-gray-400 text-sm max-w-xl mb-6 leading-relaxed">
-            Compare recorded arrivals against the projected {nextYearForecast.year}–
-            {yearlyForecasts[1].year} forecast, both by season and by year.
+            Recorded arrivals flowing into the model's {firstForecastYear}–
+            {lastForecastYear} projection, both by month and by year.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
-            <select className={style.select} value={scenarioKey} onChange={(e) => setScenarioKey(e.target.value)}>
-              {Object.entries(SCENARIOS).map(([key, s]) => (
-                <option key={key} value={key}>{s.label}</option>
-              ))}
-            </select>
             <select className={style.select} value={historyRange} onChange={(e) => setHistoryRange(Number(e.target.value))}>
               <option value={5}>Last 5 years</option>
               <option value={10}>Last 10 years</option>
@@ -168,45 +250,47 @@ const Comparison = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <StatCard label={`${recentHistory[recentHistory.length - 1].year} Actual`} value={`${(recentHistory[recentHistory.length - 1].total / 1e6).toFixed(2)}M`} />
-            <StatCard label={`${nextYearForecast.year} Forecast`} value={`${(nextYearForecast.total / 1e6).toFixed(2)}M`} sub={scenario.label} />
+            <StatCard label={`${lastActualYear} Actual`} value={`${(lastActualTotal / 1e6).toFixed(2)}M`} />
+            <StatCard label={`${firstForecastYear} Forecast`} value={`${(firstForecastTotal / 1e6).toFixed(2)}M`} sub={model} />
             <StatCard
               label="Projected Change"
               value={`${pctDiff > 0 ? "+" : ""}${pctDiff}%`}
               subColor={pctDiff >= 0 ? "#7fae6b" : "#c77d5a"}
               sub="vs last actual year"
             />
-            <StatCard label="Forecast Peak Month" value={months[peakMonthIdx]} />
+            <StatCard label="Forecast Peak Month" value={peakMonthEntry.label} />
           </div>
         </div>
 
-        {/* Monthly shape comparison */}
+        {/* Monthly continuous timeline: history flowing straight into forecast */}
         <div className={style.card}>
           <div className={style.sectionTitle}>
-            <FaChartBar className="text-orange-400" />
-            <h2>Seasonal Pattern: Historical vs Forecast</h2>
+            <FaChartLine className="text-orange-400" />
+            <h2>Monthly Arrivals: Recent History → Forecast</h2>
           </div>
           <p className={style.subtext}>
-            Average historical monthly arrivals against the {nextYearForecast.year} projection —
-            bars taller than the gray baseline indicate projected growth for that month.
+            Solid gray line is recorded monthly arrivals; the dashed orange line continues
+            directly from it as the {model} model's projection, with the shaded band showing
+            its confidence interval.
           </p>
-          <div style={{ height: 300 }}>
-            <Bar data={monthlyComparisonData} options={baseOptions} />
+          <div style={{ height: 340 }}>
+            <Line data={monthlyTimelineData} options={baseOptions} />
           </div>
           <p className={style.insight}>
-            The {scenario.label.toLowerCase()} scenario projects {months[peakMonthIdx]} as the peak
-            month for {nextYearForecast.year}, in line with the historical autumn travel pattern.
+            The model projects {peakMonthEntry.label} as the single busiest month ahead,
+            consistent with the historical autumn travel pattern.
           </p>
         </div>
 
-        {/* Yearly timeline: historical flowing into forecast */}
+        {/* Yearly continuous timeline */}
         <div className={style.card}>
           <h2 className="font-semibold text-lg">Yearly Totals: Actual → Projected</h2>
           <p className={style.subtext}>
-            Gray bars are recorded history; orange bars are the model's projection continuing from it.
+            The gray line is recorded history; the dashed orange line is the {model} model's
+            projection continuing from it.
           </p>
           <div style={{ height: 300 }}>
-            <Bar data={yearlyTimelineData} options={baseOptions} />
+            <Line data={yearlyTimelineData} options={baseOptions} />
           </div>
         </div>
       </div>

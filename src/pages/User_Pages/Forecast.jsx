@@ -1,12 +1,16 @@
-import { useMemo, useState } from "react";
+
+
+
+
+import { useMemo } from "react";
 import {
   Chart as ChartJS, CategoryScale, LinearScale, PointElement,
   LineElement, Filler, Tooltip, Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { FaChartLine, FaCalendarAlt } from "react-icons/fa";
+import { FaChartLine, FaCalendarAlt, FaRobot } from "react-icons/fa";
 import { useTheme } from "../../auth/ThemeContext";
-import data from "../../data/historicaldata.json";
+import forecastData from "../../data/forecastdata.json";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
@@ -17,48 +21,15 @@ const style = {
   subtext: "text-sm text-gray-400 mt-1 mb-2 max-w-2xl leading-relaxed",
   insight: "text-sm text-gray-400 mt-4 pt-4 border-t border-gray-500/20 leading-relaxed",
   statLabel: "text-xs uppercase tracking-wider text-gray-400 mb-2",
-  scenarioBtn: "px-4 py-2 rounded-xl text-sm font-medium border transition-all",
+  badge: "px-2.5 py-1 rounded-lg text-[11px] font-medium",
 };
 
-const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-
-const SCENARIOS = {
-  conservative: { label: "Conservative", growth: 0.03, band: 0.08 },
-  base:         { label: "Base Case",    growth: 0.074, band: 0.15 },
-  optimistic:   { label: "Optimistic",   growth: 0.12, band: 0.22 },
+// Crowd-level → color mapping (kept separate from the orange accent used for the forecast line)
+const CROWD_COLORS = {
+  Normal: { bg: "bg-green-400/15", text: "text-green-400" },
+  Medium: { bg: "bg-amber-400/15", text: "text-amber-400" },
+  High:   { bg: "bg-red-400/15",   text: "text-red-400" },
 };
-
-// Placeholder model: seasonal baseline (avg of recent non-COVID years per month),
-// compounded across two forecast years, ± a scenario-based confidence band.
-// Swap this out for a real API/model call later — the rest of the UI doesn't need to change.
-function computeForecast(monthlyArrivals, scenarioKey, startYear) {
-  const scenario = SCENARIOS[scenarioKey];
-  const recentYears = monthlyArrivals.filter((d) => d.year >= 2019 && d.year !== 2020 && d.year !== 2021);
-  const baseline12 = months.map((m) => {
-    const vals = recentYears.map((y) => y[m] || 0);
-    return vals.reduce((a, b) => a + b, 0) / vals.length;
-  });
-
-  const labels = [];
-  const baseline = [];
-  const forecast = [];
-  const upper = [];
-  const lower = [];
-
-  for (let yearOffset = 0; yearOffset < 2; yearOffset++) {
-    const compoundedGrowth = Math.pow(1 + scenario.growth, yearOffset + 1);
-    months.forEach((m, i) => {
-      labels.push(`${m} '${String(startYear + yearOffset).slice(-2)}`);
-      baseline.push(baseline12[i]);
-      const f = baseline12[i] * compoundedGrowth;
-      forecast.push(f);
-      upper.push(f * (1 + scenario.band));
-      lower.push(f * (1 - scenario.band));
-    });
-  }
-
-  return { labels, baseline, forecast, upper, lower, scenario };
-}
 
 function usePalette(theme) {
   return useMemo(() => {
@@ -83,23 +54,31 @@ function StatCard({ label, value, sub, subColor }) {
   );
 }
 
+function CrowdBadge({ level }) {
+  const c = CROWD_COLORS[level] || CROWD_COLORS.Normal;
+  return <span className={`${style.badge} ${c.bg} ${c.text}`}>{level}</span>;
+}
+
 const Forecast = () => {
   const { theme } = useTheme();
   const palette = usePalette(theme);
-  const { monthlyArrivals } = data;
-  const [scenarioKey, setScenarioKey] = useState("base");
 
-  const latestYear = Math.max(...monthlyArrivals.map((d) => d.year));
-  const startYear = latestYear + 1;
+  const { model, model_order, trained_on, forecasts, annual_totals } = forecastData;
 
-  const { labels, baseline, forecast, upper, lower, scenario } = useMemo(
-    () => computeForecast(monthlyArrivals, scenarioKey, startYear),
-    [monthlyArrivals, scenarioKey, startYear]
-  );
+  const labels = useMemo(() => forecasts.map((d) => d.label), [forecasts]);
+  const forecastVals = useMemo(() => forecasts.map((d) => d.forecast), [forecasts]);
+  const upperVals = useMemo(() => forecasts.map((d) => d.upper), [forecasts]);
+  const lowerVals = useMemo(() => forecasts.map((d) => d.lower), [forecasts]);
 
-  const peakIdx = forecast.indexOf(Math.max(...forecast));
-  const totalForecast = forecast.reduce((a, b) => a + b, 0);
-  const totalBaselineX2 = baseline.reduce((a, b) => a + b, 0); // 24-month baseline sum (12 months × 2)
+  const peakIdx = forecastVals.indexOf(Math.max(...forecastVals));
+  const total2025 = annual_totals["2025"];
+  const total2026 = annual_totals["2026"];
+  const yoyGrowthPct = ((total2026 / total2025 - 1) * 100).toFixed(1);
+
+  const avgBandWidthPct = useMemo(() => {
+    const pcts = forecasts.map((d) => ((d.upper - d.lower) / d.forecast) * 100);
+    return (pcts.reduce((a, b) => a + b, 0) / pcts.length).toFixed(0);
+  }, [forecasts]);
 
   const baseOptions = {
     responsive: true,
@@ -112,6 +91,12 @@ const Forecast = () => {
         bodyColor: palette.tooltipText,
         borderColor: "rgba(251,146,60,0.3)",
         borderWidth: 1,
+        callbacks: {
+          afterBody: (items) => {
+            const d = forecasts[items[0].dataIndex];
+            return d ? `Crowd level: ${d.crowd_level}` : "";
+          },
+        },
       },
     },
     scales: {
@@ -125,7 +110,7 @@ const Forecast = () => {
     datasets: [
       {
         label: "Upper Bound",
-        data: upper,
+        data: upperVals,
         borderColor: "transparent",
         backgroundColor: "rgba(251,146,60,0.12)",
         fill: "+1",
@@ -134,7 +119,7 @@ const Forecast = () => {
       },
       {
         label: "Lower Bound",
-        data: lower,
+        data: lowerVals,
         borderColor: "transparent",
         backgroundColor: "rgba(251,146,60,0.12)",
         fill: false,
@@ -142,23 +127,12 @@ const Forecast = () => {
         tension: 0.35,
       },
       {
-        label: `Forecast (${scenario.label})`,
-        data: forecast,
+        label: "Forecast",
+        data: forecastVals,
         borderColor: palette.accent,
         backgroundColor: palette.accent,
         borderWidth: 2,
         pointRadius: 2,
-        tension: 0.35,
-        fill: false,
-      },
-      {
-        label: "Historical Seasonal Average",
-        data: baseline,
-        borderColor: palette.text,
-        borderDash: [4, 4],
-        backgroundColor: "transparent",
-        pointRadius: 0,
-        borderWidth: 1.5,
         tension: 0.35,
         fill: false,
       },
@@ -179,37 +153,27 @@ const Forecast = () => {
             24-Month Arrival Forecast
           </h1>
           <p className="text-gray-400 text-sm max-w-xl mb-6 leading-relaxed">
-            Projected monthly arrivals for {startYear}–{startYear + 1}, based on seasonal
-            patterns and historical growth trends. Adjust the scenario to see optimistic
-            and conservative ranges.
+            Projected monthly arrivals for 2025–2026 from a {model} model trained on
+            data from {trained_on}. Shaded band shows the 95% confidence interval.
           </p>
 
-          <div className="flex gap-2 mb-8">
-            {Object.entries(SCENARIOS).map(([key, s]) => (
-              <button
-                key={key}
-                onClick={() => setScenarioKey(key)}
-                className={`${style.scenarioBtn} ${
-                  scenarioKey === key
-                    ? "bg-orange-400/15 border-orange-400 text-orange-400"
-                    : "border-gray-500/40 text-gray-400 hover:border-orange-400/40"
-                }`}
-              >
-                {s.label}
-              </button>
-            ))}
+          <div className="flex items-center gap-2 mb-8 text-xs text-gray-400">
+            <FaRobot className="text-orange-400" />
+            <span>
+              {model} {model_order} · trained {trained_on}
+            </span>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <StatCard label="Projected Peak Month" value={labels[peakIdx]} sub="Highest expected arrivals" />
             <StatCard
-              label="24-Month Projection"
-              value={`${(totalForecast / 1e6).toFixed(2)}M`}
-              sub={`+${((totalForecast / totalBaselineX2 - 1) * 100).toFixed(1)}% vs seasonal avg`}
-              subColor="#7fae6b"
+              label="2026 Annual Projection"
+              value={`${(total2026 / 1e6).toFixed(2)}M`}
+              sub={`${yoyGrowthPct >= 0 ? "+" : ""}${yoyGrowthPct}% vs 2025`}
+              subColor={yoyGrowthPct >= 0 ? "#7fae6b" : "#ef4444"}
             />
-            <StatCard label="Growth Assumption" value={`${(scenario.growth * 100).toFixed(1)}%`} sub="Applied annually" />
-            <StatCard label="Confidence Band" value={`±${(scenario.band * 100).toFixed(0)}%`} sub="Uncertainty range" />
+            <StatCard label="2025 Annual Projection" value={`${(total2025 / 1e6).toFixed(2)}M`} sub="Full-year total" />
+            <StatCard label="Avg. Confidence Band" value={`±${avgBandWidthPct / 2}%`} sub="Uncertainty range" />
           </div>
         </div>
 
@@ -220,23 +184,46 @@ const Forecast = () => {
             <h2>Forecast with Confidence Range</h2>
           </div>
           <p className={style.subtext}>
-            Shaded band shows the {scenario.label.toLowerCase()} scenario's uncertainty range
-            around the central forecast, across both projected years.
+            Shaded band shows the model's confidence interval around the central forecast,
+            across both projected years.
           </p>
           <div style={{ height: 380 }}>
             <Line data={bandData} options={baseOptions} />
           </div>
           <p className={style.insight}>
-            The {scenario.label.toLowerCase()} scenario compounds {(scenario.growth * 100).toFixed(1)}%
-            annual growth over the historical seasonal pattern (2019, 2022-2024 average; pandemic
-            years excluded). {labels[peakIdx]} is projected as the single highest month across the
-            24-month window, consistent with the historical autumn travel season.
+            {labels[peakIdx]} is projected as the single highest month across the 24-month
+            window, consistent with the historical autumn travel season. Confidence intervals
+            widen further out in the forecast horizon, reflecting increasing model uncertainty.
           </p>
         </div>
 
+        {/* Monthly crowd-level breakdown */}
+        <div className={style.card}>
+          <div className={style.sectionTitle}>
+            <FaCalendarAlt className="text-orange-400" />
+            <h2>Monthly Crowd Levels</h2>
+          </div>
+          <p className={style.subtext}>
+            Expected crowd level per month, derived from the forecasted arrival volume.
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 mt-2">
+            {forecasts.map((d) => (
+              <div
+                key={d.label}
+                className="flex flex-col items-center justify-center gap-2 border border-gray-500/20 rounded-xl py-3"
+              >
+                <span className="text-xs text-gray-400">{d.label}</span>
+                <span className="text-sm font-semibold tabular-nums">
+                  {d.forecast.toLocaleString()}
+                </span>
+                <CrowdBadge level={d.crowd_level} />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="text-xs text-gray-500 text-center pb-4">
-          Forecast currently uses a seasonal-average + compounded growth-rate placeholder model.
-          Replace <code>computeForecast()</code> with a real prediction API when available.
+          Forecast generated by a {model} {model_order} model trained on {trained_on}.
         </div>
       </div>
     </div>

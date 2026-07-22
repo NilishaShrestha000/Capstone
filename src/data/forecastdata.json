@@ -1,0 +1,35 @@
+{
+  "model": "SARIMAX",
+  "model_order": "(3,1,3)(1,1,0,12)",
+  "trained_on": "January 1995 to December 2024",
+  "forecasts": [
+    { "label": "Jan '25", "year": 2025, "month": "Jan", "forecast": 76151, "lower": 52961, "upper": 99340, "crowd_level": "Normal" },
+    { "label": "Feb '25", "year": 2025, "month": "Feb", "forecast": 98024, "lower": 69075, "upper": 126973, "crowd_level": "Medium" },
+    { "label": "Mar '25", "year": 2025, "month": "Mar", "forecast": 125812, "lower": 94223, "upper": 157401, "crowd_level": "High" },
+    { "label": "Apr '25", "year": 2025, "month": "Apr", "forecast": 117983, "lower": 83421, "upper": 152545, "crowd_level": "High" },
+    { "label": "May '25", "year": 2025, "month": "May", "forecast": 95267, "lower": 57992, "upper": 132542, "crowd_level": "Medium" },
+    { "label": "Jun '25", "year": 2025, "month": "Jun", "forecast": 86475, "lower": 45648, "upper": 127303, "crowd_level": "Medium" },
+    { "label": "Jul '25", "year": 2025, "month": "Jul", "forecast": 71841, "lower": 27742, "upper": 115940, "crowd_level": "Normal" },
+    { "label": "Aug '25", "year": 2025, "month": "Aug", "forecast": 81559, "lower": 33823, "upper": 129295, "crowd_level": "Medium" },
+    { "label": "Sep '25", "year": 2025, "month": "Sep", "forecast": 104125, "lower": 53263, "upper": 154987, "crowd_level": "Medium" },
+    { "label": "Oct '25", "year": 2025, "month": "Oct", "forecast": 132396, "lower": 78332, "upper": 186460, "crowd_level": "High" },
+    { "label": "Nov '25", "year": 2025, "month": "Nov", "forecast": 122151, "lower": 65346, "upper": 178956, "crowd_level": "High" },
+    { "label": "Dec '25", "year": 2025, "month": "Dec", "forecast": 104965, "lower": 45384, "upper": 164546, "crowd_level": "Medium" },
+    { "label": "Jan '26", "year": 2026, "month": "Jan", "forecast": 87691, "lower": 20749, "upper": 154632, "crowd_level": "Medium" },
+    { "label": "Feb '26", "year": 2026, "month": "Feb", "forecast": 108717, "lower": 36276, "upper": 181157, "crowd_level": "Medium" },
+    { "label": "Mar '26", "year": 2026, "month": "Mar", "forecast": 137174, "lower": 60708, "upper": 213640, "crowd_level": "High" },
+    { "label": "Apr '26", "year": 2026, "month": "Apr", "forecast": 126057, "lower": 45373, "upper": 206742, "crowd_level": "High" },
+    { "label": "May '26", "year": 2026, "month": "May", "forecast": 103502, "lower": 18942, "upper": 188062, "crowd_level": "Medium" },
+    { "label": "Jun '26", "year": 2026, "month": "Jun", "forecast": 93156, "lower": 4315, "upper": 181996, "crowd_level": "Medium" },
+    { "label": "Jul '26", "year": 2026, "month": "Jul", "forecast": 79179, "lower": 0, "upper": 172005, "crowd_level": "Normal" },
+    { "label": "Aug '26", "year": 2026, "month": "Aug", "forecast": 88585, "lower": 0, "upper": 185586, "crowd_level": "Medium" },
+    { "label": "Sep '26", "year": 2026, "month": "Sep", "forecast": 111248, "lower": 10438, "upper": 212057, "crowd_level": "High" },
+    { "label": "Oct '26", "year": 2026, "month": "Oct", "forecast": 139749, "lower": 35083, "upper": 244416, "crowd_level": "High" },
+    { "label": "Nov '26", "year": 2026, "month": "Nov", "forecast": 129374, "lower": 21181, "upper": 237567, "crowd_level": "High" },
+    { "label": "Dec '26", "year": 2026, "month": "Dec", "forecast": 110183, "lower": 0, "upper": 221922, "crowd_level": "High" }
+  ],
+  "annual_totals": {
+    "2025": 1216749,
+    "2026": 1314614
+  }
+}
