@@ -28,12 +28,6 @@ export default function AdminHome() {
       icon: BrainCircuit,
     },
     {
-      title: "Weather Stations",
-      value: "78",
-      change: "Online",
-      icon: CloudSun,
-    },
-    {
       title: "Accuracy",
       value: "96.4%",
       change: "Excellent",
@@ -54,14 +48,10 @@ export default function AdminHome() {
       title: "View Reports",
       icon: FileBarChart2,
     },
-    {
-      title: "System Settings",
-      icon: Settings,
-    },
   ];
 
   const activities = [
-    "Weather dataset uploaded successfully.",
+    "Dataset uploaded successfully.",
     "Forecast model retrained.",
     "Tourism statistics updated.",
     "Monthly analytics report exported.",
@@ -69,7 +59,7 @@ export default function AdminHome() {
   ];
 
   const status = [
-    { title: "Weather API", value: "Online" },
+    { title: "API", value: "Online" },
     { title: "Prediction Engine", value: "Running" },
     { title: "Database", value: "Healthy" },
     { title: "Storage", value: "78% Used" },
@@ -89,8 +79,8 @@ export default function AdminHome() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            Monitor tourism forecasts, weather intelligence, machine learning
-            predictions, and system performance from a single dashboard.
+            Monitor tourism forecasts, machine learning predictions, and system
+            performance from a single dashboard.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
