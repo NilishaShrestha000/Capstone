@@ -1,64 +1,61 @@
 import { useMemo, useState } from "react";
 import {
-  Chart as ChartJS, CategoryScale, LinearScale, PointElement,
-  LineElement, Filler, Tooltip, Legend,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { FaChartLine, FaCalendarAlt } from "react-icons/fa";
 import { useTheme } from "../../auth/ThemeContext";
 import data from "../../data/historicaldata.json";
+import forecastData from "../../data/forecastdata.json";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+);
 
 const style = {
   card: "bg-background text-foreground border border-gray-500/40 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-300",
   hero: "bg-background text-foreground border border-gray-500/40 rounded-2xl p-8 md:p-10",
   sectionTitle: "font-semibold flex items-center gap-2 text-lg",
   subtext: "text-sm text-gray-400 mt-1 mb-2 max-w-2xl leading-relaxed",
-  insight: "text-sm text-gray-400 mt-4 pt-4 border-t border-gray-500/20 leading-relaxed",
+  insight:
+    "text-sm text-gray-400 mt-4 pt-4 border-t border-gray-500/20 leading-relaxed",
   statLabel: "text-xs uppercase tracking-wider text-gray-400 mb-2",
   scenarioBtn: "px-4 py-2 rounded-xl text-sm font-medium border transition-all",
 };
 
-const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 const SCENARIOS = {
   conservative: { label: "Conservative", growth: 0.03, band: 0.08 },
-  base:         { label: "Base Case",    growth: 0.074, band: 0.15 },
-  optimistic:   { label: "Optimistic",   growth: 0.12, band: 0.22 },
+  base: { label: "Base Case", growth: 0.074, band: 0.15 },
+  optimistic: { label: "Optimistic", growth: 0.12, band: 0.22 },
 };
-
-// Placeholder model: seasonal baseline (avg of recent non-COVID years per month),
-// compounded across two forecast years, ± a scenario-based confidence band.
-// Swap this out for a real API/model call later — the rest of the UI doesn't need to change.
-function computeForecast(monthlyArrivals, scenarioKey, startYear) {
-  const scenario = SCENARIOS[scenarioKey];
-  const recentYears = monthlyArrivals.filter((d) => d.year >= 2019 && d.year !== 2020 && d.year !== 2021);
-  const baseline12 = months.map((m) => {
-    const vals = recentYears.map((y) => y[m] || 0);
-    return vals.reduce((a, b) => a + b, 0) / vals.length;
-  });
-
-  const labels = [];
-  const baseline = [];
-  const forecast = [];
-  const upper = [];
-  const lower = [];
-
-  for (let yearOffset = 0; yearOffset < 2; yearOffset++) {
-    const compoundedGrowth = Math.pow(1 + scenario.growth, yearOffset + 1);
-    months.forEach((m, i) => {
-      labels.push(`${m} '${String(startYear + yearOffset).slice(-2)}`);
-      baseline.push(baseline12[i]);
-      const f = baseline12[i] * compoundedGrowth;
-      forecast.push(f);
-      upper.push(f * (1 + scenario.band));
-      lower.push(f * (1 - scenario.band));
-    });
-  }
-
-  return { labels, baseline, forecast, upper, lower, scenario };
-}
 
 function usePalette(theme) {
   return useMemo(() => {
@@ -77,8 +74,14 @@ function StatCard({ label, value, sub, subColor }) {
   return (
     <div className={style.card}>
       <div className={style.statLabel}>{label}</div>
-      <div className="text-2xl font-semibold text-orange-400 tabular-nums">{value}</div>
-      {sub && <div className="text-xs mt-1" style={{ color: subColor || "#9ca3af" }}>{sub}</div>}
+      <div className="text-2xl font-semibold text-orange-400 tabular-nums">
+        {value}
+      </div>
+      {sub && (
+        <div className="text-xs mt-1" style={{ color: subColor || "#9ca3af" }}>
+          {sub}
+        </div>
+      )}
     </div>
   );
 }
@@ -89,17 +92,37 @@ const Forecast = () => {
   const { monthlyArrivals } = data;
   const [scenarioKey, setScenarioKey] = useState("base");
 
-  const latestYear = Math.max(...monthlyArrivals.map((d) => d.year));
-  const startYear = latestYear + 1;
+  const scenario = SCENARIOS[scenarioKey] || SCENARIOS.base;
 
-  const { labels, baseline, forecast, upper, lower, scenario } = useMemo(
-    () => computeForecast(monthlyArrivals, scenarioKey, startYear),
-    [monthlyArrivals, scenarioKey, startYear]
+  // Historical seasonal average per calendar month (recent non-COVID years),
+  // used as the dashed reference line the SARIMAX forecast is compared against.
+  const seasonalAvg = useMemo(() => {
+    const recent = monthlyArrivals.filter(
+      (d) => d.year >= 2019 && d.year !== 2020 && d.year !== 2021,
+    );
+    const avg = {};
+    months.forEach((m) => {
+      const vals = recent.map((y) => y[m] || 0);
+      avg[m] = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
+    });
+    return avg;
+  }, [monthlyArrivals]);
+
+  // Forecast values come straight from the trained SARIMAX model (forecastdata.json).
+  const { labels, forecast, upper, lower, baseline } = useMemo(
+    () => ({
+      labels: forecastData.forecasts.map((d) => d.label),
+      forecast: forecastData.forecasts.map((d) => d.forecast),
+      upper: forecastData.forecasts.map((d) => d.upper),
+      lower: forecastData.forecasts.map((d) => Math.max(0, d.lower)),
+      baseline: forecastData.forecasts.map((d) => seasonalAvg[d.month] || 0),
+    }),
+    [seasonalAvg],
   );
 
   const peakIdx = forecast.indexOf(Math.max(...forecast));
   const totalForecast = forecast.reduce((a, b) => a + b, 0);
-  const totalBaselineX2 = baseline.reduce((a, b) => a + b, 0); // 24-month baseline sum (12 months × 2)
+  const totalBaselineX2 = baseline.reduce((a, b) => a + b, 0); // 24-month seasonal-average sum
 
   const baseOptions = {
     responsive: true,
@@ -115,7 +138,10 @@ const Forecast = () => {
       },
     },
     scales: {
-      x: { grid: { color: palette.grid }, ticks: { color: palette.text, maxRotation: 45, minRotation: 45 } },
+      x: {
+        grid: { color: palette.grid },
+        ticks: { color: palette.text, maxRotation: 45, minRotation: 45 },
+      },
       y: { grid: { color: palette.grid }, ticks: { color: palette.text } },
     },
   };
@@ -142,7 +168,7 @@ const Forecast = () => {
         tension: 0.35,
       },
       {
-        label: `Forecast (${scenario.label})`,
+        label: "Forecast (SARIMAX)",
         data: forecast,
         borderColor: palette.accent,
         backgroundColor: palette.accent,
@@ -168,7 +194,6 @@ const Forecast = () => {
   return (
     <div className="bg-background text-foreground min-h-screen">
       <div className="max-w-6xl mx-auto p-6 space-y-10">
-
         {/* Hero */}
         <div className={style.hero}>
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-3">
@@ -179,9 +204,9 @@ const Forecast = () => {
             24-Month Arrival Forecast
           </h1>
           <p className="text-gray-400 text-sm max-w-xl mb-6 leading-relaxed">
-            Projected monthly arrivals for {startYear}–{startYear + 1}, based on seasonal
-            patterns and historical growth trends. Adjust the scenario to see optimistic
-            and conservative ranges.
+            Projected monthly arrivals for 2025–2026 from a trained SARIMAX
+            model, shown against the historical seasonal average. Switch
+            scenarios to view the confidence band and growth assumptions.
           </p>
 
           <div className="flex gap-2 mb-8">
@@ -201,15 +226,27 @@ const Forecast = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <StatCard label="Projected Peak Month" value={labels[peakIdx]} sub="Highest expected arrivals" />
+            <StatCard
+              label="Projected Peak Month"
+              value={labels[peakIdx]}
+              sub="Highest expected arrivals"
+            />
             <StatCard
               label="24-Month Projection"
               value={`${(totalForecast / 1e6).toFixed(2)}M`}
               sub={`+${((totalForecast / totalBaselineX2 - 1) * 100).toFixed(1)}% vs seasonal avg`}
               subColor="#7fae6b"
             />
-            <StatCard label="Growth Assumption" value={`${(scenario.growth * 100).toFixed(1)}%`} sub="Applied annually" />
-            <StatCard label="Confidence Band" value={`±${(scenario.band * 100).toFixed(0)}%`} sub="Uncertainty range" />
+            <StatCard
+              label="Growth Assumption"
+              value={`${(scenario.growth * 100).toFixed(1)}%`}
+              sub="Applied annually"
+            />
+            <StatCard
+              label="Confidence Band"
+              value={`±${(scenario.band * 100).toFixed(0)}%`}
+              sub="Uncertainty range"
+            />
           </div>
         </div>
 
@@ -220,23 +257,26 @@ const Forecast = () => {
             <h2>Forecast with Confidence Range</h2>
           </div>
           <p className={style.subtext}>
-            Shaded band shows the {scenario.label.toLowerCase()} scenario's uncertainty range
-            around the central forecast, across both projected years.
+            The shaded band shows the model's uncertainty range around the
+            central forecast, across both projected years.
           </p>
           <div style={{ height: 380 }}>
             <Line data={bandData} options={baseOptions} />
           </div>
           <p className={style.insight}>
-            The {scenario.label.toLowerCase()} scenario compounds {(scenario.growth * 100).toFixed(1)}%
-            annual growth over the historical seasonal pattern (2019, 2022-2024 average; pandemic
-            years excluded). {labels[peakIdx]} is projected as the single highest month across the
-            24-month window, consistent with the historical autumn travel season.
+            Forecasts are generated by a SARIMAX {forecastData.model_order}{" "}
+            model trained on monthly arrivals from {forecastData.trained_on}.{" "}
+            {labels[peakIdx]} is projected as the single highest month across
+            the 24-month window, consistent with the historical autumn travel
+            season. The dashed line marks the recent seasonal average (2019,
+            2022–2024; pandemic years excluded).
           </p>
         </div>
 
         <div className="text-xs text-gray-500 text-center pb-4">
-          Forecast currently uses a seasonal-average + compounded growth-rate placeholder model.
-          Replace <code>computeForecast()</code> with a real prediction API when available.
+          Forecast values are produced by a {forecastData.model} time-series
+          model ({forecastData.model_order}) trained on{" "}
+          {forecastData.trained_on}.
         </div>
       </div>
     </div>
