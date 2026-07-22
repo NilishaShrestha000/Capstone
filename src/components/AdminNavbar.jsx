@@ -30,9 +30,7 @@ const AdminNavbar = ({ setSlide }) => {
 
             {/* Right side controls */}
             <div className="flex items-center gap-3">
-                <button onClick={toggleTheme} className="text-foreground hover:text-orange-400">
-                    {theme === 'dark' ? "☀️" : "🌑"}
-                </button>
+               
 
                 <Link to="/logout" className={style.logoutBtn}>
                     Logout
