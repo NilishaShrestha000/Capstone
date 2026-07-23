@@ -1,5 +1,8 @@
 
-{/* Pages */ }
+
+
+
+{/* Pages */}
 import Login from "../pages/Login";
 import Logout from "../pages/logout";
 import NepalFlow from "../pages/User_Pages/NepalFlow";
@@ -9,19 +12,15 @@ import Comparison from "../pages/User_Pages/Comparison";
 import AdminHome from "../pages/Admin_Pages/AdminHome";
 import AdminUpload from "../pages/Admin_Pages/AdminUpload";
 import AdminVerify from "../pages/Admin_Pages/AdminVerify";
-
-{/*Route*/ }
+{/* Route */}
 import ProtectedRoute from "./ProtectedRoute";
-{/*Component*/ }
+{/* Component */}
 import Layout from "../components/Layout";
-
 import { createBrowserRouter } from "react-router-dom";
-
 import { ThemeProvider } from "../auth/ThemeContext";
 import AboutUs from "../pages/FooterCompanayPages/AboutUs";
 import PrivacyPolicy from "../pages/FooterCompanayPages/PrivacyPolicy";
 import TermsOfUse from "../pages/FooterCompanayPages/TermsOfUse";
-
 
 const router = createBrowserRouter([
     {
@@ -37,12 +36,14 @@ const router = createBrowserRouter([
             { path: "adminhome", element: <AdminHome /> },
             { path: "adminupload", element: <AdminUpload /> },
             { path: "adminverify", element: <AdminVerify /> },
-
             // Footer Routes
             { path: "aboutus", element: <AboutUs /> },
             { path: "privacypolicy", element: <PrivacyPolicy /> },
             { path: "termsofuse", element: <TermsOfUse /> }
         ],
     }
-]);
+], {
+    basename: "/Capstone/",
+});
+
 export default router;
