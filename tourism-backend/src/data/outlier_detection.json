@@ -1,0 +1,23 @@
+{
+    "method": "Z-Score",
+    "threshold": 3.0,
+    "total_months_checked": 348,
+    "outliers_found": 2,
+    "replacement_method": "12-month rolling median",
+    "outliers": [
+        {
+            "date": "2018-11-01",
+            "month_year": "November 2018",
+            "original_value": 147859.0,
+            "replaced_with": 97148.0,
+            "z_score": 3.51
+        },
+        {
+            "date": "2019-10-01",
+            "month_year": "October 2019",
+            "original_value": 134096.0,
+            "replaced_with": 93676.0,
+            "z_score": 3.02
+        }
+    ]
+}

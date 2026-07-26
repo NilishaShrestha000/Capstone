@@ -1,0 +1,254 @@
+{
+    "model_used": "SARIMAX",
+    "model_order": "(3,1,3)(1,1,0,12)",
+    "trained_on": "January 1995 to December 2024",
+    "forecast_generated": "2025-2026",
+    "forecast_2025": [
+        {
+            "date": "2025-01-01",
+            "year": 2025,
+            "month": "Jan",
+            "month_number": 1,
+            "forecast": 76151.0,
+            "lower_95": 52961.0,
+            "upper_95": 99340.0,
+            "crowd_level": "Normal"
+        },
+        {
+            "date": "2025-02-01",
+            "year": 2025,
+            "month": "Feb",
+            "month_number": 2,
+            "forecast": 98024.0,
+            "lower_95": 69075.0,
+            "upper_95": 126973.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2025-03-01",
+            "year": 2025,
+            "month": "Mar",
+            "month_number": 3,
+            "forecast": 125812.0,
+            "lower_95": 94223.0,
+            "upper_95": 157401.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2025-04-01",
+            "year": 2025,
+            "month": "Apr",
+            "month_number": 4,
+            "forecast": 117983.0,
+            "lower_95": 83421.0,
+            "upper_95": 152545.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2025-05-01",
+            "year": 2025,
+            "month": "May",
+            "month_number": 5,
+            "forecast": 95267.0,
+            "lower_95": 57992.0,
+            "upper_95": 132542.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2025-06-01",
+            "year": 2025,
+            "month": "Jun",
+            "month_number": 6,
+            "forecast": 86475.0,
+            "lower_95": 45648.0,
+            "upper_95": 127303.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2025-07-01",
+            "year": 2025,
+            "month": "Jul",
+            "month_number": 7,
+            "forecast": 71841.0,
+            "lower_95": 27742.0,
+            "upper_95": 115940.0,
+            "crowd_level": "Normal"
+        },
+        {
+            "date": "2025-08-01",
+            "year": 2025,
+            "month": "Aug",
+            "month_number": 8,
+            "forecast": 81559.0,
+            "lower_95": 33823.0,
+            "upper_95": 129295.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2025-09-01",
+            "year": 2025,
+            "month": "Sep",
+            "month_number": 9,
+            "forecast": 104125.0,
+            "lower_95": 53263.0,
+            "upper_95": 154987.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2025-10-01",
+            "year": 2025,
+            "month": "Oct",
+            "month_number": 10,
+            "forecast": 132396.0,
+            "lower_95": 78332.0,
+            "upper_95": 186460.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2025-11-01",
+            "year": 2025,
+            "month": "Nov",
+            "month_number": 11,
+            "forecast": 122151.0,
+            "lower_95": 65346.0,
+            "upper_95": 178956.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2025-12-01",
+            "year": 2025,
+            "month": "Dec",
+            "month_number": 12,
+            "forecast": 104965.0,
+            "lower_95": 45384.0,
+            "upper_95": 164546.0,
+            "crowd_level": "Medium"
+        }
+    ],
+    "forecast_2026": [
+        {
+            "date": "2026-01-01",
+            "year": 2026,
+            "month": "Jan",
+            "month_number": 1,
+            "forecast": 87691.0,
+            "lower_95": 20749.0,
+            "upper_95": 154632.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2026-02-01",
+            "year": 2026,
+            "month": "Feb",
+            "month_number": 2,
+            "forecast": 108717.0,
+            "lower_95": 36276.0,
+            "upper_95": 181157.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2026-03-01",
+            "year": 2026,
+            "month": "Mar",
+            "month_number": 3,
+            "forecast": 137174.0,
+            "lower_95": 60708.0,
+            "upper_95": 213640.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2026-04-01",
+            "year": 2026,
+            "month": "Apr",
+            "month_number": 4,
+            "forecast": 126057.0,
+            "lower_95": 45373.0,
+            "upper_95": 206742.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2026-05-01",
+            "year": 2026,
+            "month": "May",
+            "month_number": 5,
+            "forecast": 103502.0,
+            "lower_95": 18942.0,
+            "upper_95": 188062.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2026-06-01",
+            "year": 2026,
+            "month": "Jun",
+            "month_number": 6,
+            "forecast": 93156.0,
+            "lower_95": 4315.0,
+            "upper_95": 181996.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2026-07-01",
+            "year": 2026,
+            "month": "Jul",
+            "month_number": 7,
+            "forecast": 79179.0,
+            "lower_95": -13647.0,
+            "upper_95": 172005.0,
+            "crowd_level": "Normal"
+        },
+        {
+            "date": "2026-08-01",
+            "year": 2026,
+            "month": "Aug",
+            "month_number": 8,
+            "forecast": 88585.0,
+            "lower_95": -8416.0,
+            "upper_95": 185586.0,
+            "crowd_level": "Medium"
+        },
+        {
+            "date": "2026-09-01",
+            "year": 2026,
+            "month": "Sep",
+            "month_number": 9,
+            "forecast": 111248.0,
+            "lower_95": 10438.0,
+            "upper_95": 212057.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2026-10-01",
+            "year": 2026,
+            "month": "Oct",
+            "month_number": 10,
+            "forecast": 139749.0,
+            "lower_95": 35083.0,
+            "upper_95": 244416.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2026-11-01",
+            "year": 2026,
+            "month": "Nov",
+            "month_number": 11,
+            "forecast": 129374.0,
+            "lower_95": 21181.0,
+            "upper_95": 237567.0,
+            "crowd_level": "High"
+        },
+        {
+            "date": "2026-12-01",
+            "year": 2026,
+            "month": "Dec",
+            "month_number": 12,
+            "forecast": 110183.0,
+            "lower_95": -1556.0,
+            "upper_95": 221922.0,
+            "crowd_level": "High"
+        }
+    ],
+    "annual_totals": {
+        "2025": 1216749.0,
+        "2026": 1314614.0
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "project": "Web-Based Tourism Flow Analysis with Time-Series Forecasting",
+    "group": "Group 26",
+    "dataset_info": {
+        "source": "Ministry of Culture Tourism and Civil Aviation Nepal",
+        "total_years": "1995 to 2024",
+        "monthly_observations": 348,
+        "outliers_detected": 2,
+        "covid_months_marked": 21
+    },
+    "model_training": {
+        "train_period": "January 1995 to December 2022",
+        "test_period": "January 2023 to December 2024",
+        "train_months": 324,
+        "test_months": 24
+    },
+    "best_model": {
+        "name": "SARIMAX",
+        "order": "(3,1,3)(1,1,0,12)",
+        "MAE": 12022.64,
+        "RMSE": 14885.99,
+        "MAPE": 13.75,
+        "residuals_random": true,
+        "covid_dummy": true
+    },
+    "arima_model": {
+        "name": "ARIMA",
+        "order": "(2,1,2)",
+        "MAE": 18718.8,
+        "RMSE": 23537.48,
+        "MAPE": 18.56,
+        "residuals_random": false
+    },
+    "forecast_summary": {
+        "2025": {
+            "total": 1216749.0,
+            "peak_month": "Oct",
+            "peak_value": 132396.0,
+            "lowest_month": "Jul",
+            "lowest_value": 71841.0
+        },
+        "2026": {
+            "total": 1314614.0,
+            "peak_month": "Oct",
+            "peak_value": 139749.0,
+            "lowest_month": "Jul",
+            "lowest_value": 79179.0
+        }
+    },
+    "output_files": {
+        "forecast": "forecast_2025_2026.json",
+        "metrics": "model_metrics.json",
+        "historical": "historical_monthly.json",
+        "annual": "annual_arrivals.json",
+        "heatmap": "heatmap_data.json",
+        "purpose": "purpose_of_visit.json",
+        "stay": "length_of_stay.json",
+        "stationarity": "stationarity_results.json",
+        "outliers": "outlier_detection.json"
+    }
+}

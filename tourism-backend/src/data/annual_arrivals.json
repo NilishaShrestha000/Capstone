@@ -1,0 +1,208 @@
+{
+    "description": "Annual tourist arrivals Nepal 1996-2024",
+    "data": [
+        {
+            "year": 1996,
+            "total": 393613.0,
+            "third_country": 271101.0,
+            "indian": 122512.0,
+            "pct_change": 8.3
+        },
+        {
+            "year": 1997,
+            "total": 421857.0,
+            "third_country": 288419.0,
+            "indian": 133438.0,
+            "pct_change": 7.2
+        },
+        {
+            "year": 1998,
+            "total": 463684.0,
+            "third_country": 320455.0,
+            "indian": 143229.0,
+            "pct_change": 9.9
+        },
+        {
+            "year": 1999,
+            "total": 491504.0,
+            "third_country": 350843.0,
+            "indian": 140661.0,
+            "pct_change": 6.0
+        },
+        {
+            "year": 2000,
+            "total": 463646.0,
+            "third_country": 367731.0,
+            "indian": 95915.0,
+            "pct_change": -5.7
+        },
+        {
+            "year": 2001,
+            "total": 361237.0,
+            "third_country": 296917.0,
+            "indian": 64320.0,
+            "pct_change": -22.1
+        },
+        {
+            "year": 2002,
+            "total": 275468.0,
+            "third_country": 208691.0,
+            "indian": 66777.0,
+            "pct_change": -23.7
+        },
+        {
+            "year": 2003,
+            "total": 338132.0,
+            "third_country": 251769.0,
+            "indian": 86363.0,
+            "pct_change": 22.7
+        },
+        {
+            "year": 2004,
+            "total": 385297.0,
+            "third_country": 294971.0,
+            "indian": 90326.0,
+            "pct_change": 13.9
+        },
+        {
+            "year": 2005,
+            "total": 375398.0,
+            "third_country": 278964.0,
+            "indian": 96434.0,
+            "pct_change": -2.6
+        },
+        {
+            "year": 2006,
+            "total": 383926.0,
+            "third_country": 290204.0,
+            "indian": 93722.0,
+            "pct_change": 2.3
+        },
+        {
+            "year": 2007,
+            "total": 526705.0,
+            "third_country": 430695.0,
+            "indian": 96010.0,
+            "pct_change": 37.2
+        },
+        {
+            "year": 2008,
+            "total": 500277.0,
+            "third_country": 409100.0,
+            "indian": 91177.0,
+            "pct_change": -5.0
+        },
+        {
+            "year": 2009,
+            "total": 509956.0,
+            "third_country": 416072.0,
+            "indian": 93884.0,
+            "pct_change": 1.9
+        },
+        {
+            "year": 2010,
+            "total": 602867.0,
+            "third_country": 481969.0,
+            "indian": 120898.0,
+            "pct_change": 18.2
+        },
+        {
+            "year": 2011,
+            "total": 736215.0,
+            "third_country": 586711.0,
+            "indian": 149504.0,
+            "pct_change": 22.1
+        },
+        {
+            "year": 2012,
+            "total": 803092.0,
+            "third_country": 637277.0,
+            "indian": 165815.0,
+            "pct_change": 9.1
+        },
+        {
+            "year": 2013,
+            "total": 797616.0,
+            "third_country": 616642.0,
+            "indian": 180974.0,
+            "pct_change": -0.7
+        },
+        {
+            "year": 2014,
+            "total": 790118.0,
+            "third_country": 654775.0,
+            "indian": 135343.0,
+            "pct_change": -0.9
+        },
+        {
+            "year": 2015,
+            "total": 538970.0,
+            "third_country": 464156.0,
+            "indian": 74814.0,
+            "pct_change": -31.0
+        },
+        {
+            "year": 2016,
+            "total": 753002.0,
+            "third_country": 634753.0,
+            "indian": 118249.0,
+            "pct_change": 40.0
+        },
+        {
+            "year": 2017,
+            "total": 940218.0,
+            "third_country": 779386.0,
+            "indian": 160832.0,
+            "pct_change": 25.0
+        },
+        {
+            "year": 2018,
+            "total": 1173072.0,
+            "third_country": 978749.0,
+            "indian": 194323.0,
+            "pct_change": 25.0
+        },
+        {
+            "year": 2019,
+            "total": 1197191.0,
+            "third_country": 943041.0,
+            "indian": 254150.0,
+            "pct_change": 2.0
+        },
+        {
+            "year": 2020,
+            "total": 230085.0,
+            "third_country": 189749.0,
+            "indian": 40336.0,
+            "pct_change": -80.7
+        },
+        {
+            "year": 2021,
+            "total": 150962.0,
+            "third_country": 86290.0,
+            "indian": 64672.0,
+            "pct_change": -34.3
+        },
+        {
+            "year": 2022,
+            "total": 614869.0,
+            "third_country": 405535.0,
+            "indian": 209334.0,
+            "pct_change": 307.3
+        },
+        {
+            "year": 2023,
+            "total": 1014882.0,
+            "third_country": 694946.0,
+            "indian": 319936.0,
+            "pct_change": 65.05
+        },
+        {
+            "year": 2024,
+            "total": 1147548.0,
+            "third_country": 829767.0,
+            "indian": 317781.0,
+            "pct_change": 13.07
+        }
+    ]
+}

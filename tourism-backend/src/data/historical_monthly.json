@@ -1,0 +1,3138 @@
+{
+    "description": "Monthly tourist arrivals Nepal 1995-2024",
+    "source": "Ministry of Culture Tourism and Civil Aviation Nepal",
+    "data": [
+        {
+            "date": "1996-01-01",
+            "year": 1996,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 27886.0,
+            "arrivals_smoothed": 27886.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-02-01",
+            "year": 1996,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 29676.0,
+            "arrivals_smoothed": 29676.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-03-01",
+            "year": 1996,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 39336.0,
+            "arrivals_smoothed": 39336.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-04-01",
+            "year": 1996,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 36331.0,
+            "arrivals_smoothed": 36331.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-05-01",
+            "year": 1996,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 29728.0,
+            "arrivals_smoothed": 29728.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-06-01",
+            "year": 1996,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 26749.0,
+            "arrivals_smoothed": 26749.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-07-01",
+            "year": 1996,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 22684.0,
+            "arrivals_smoothed": 22684.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-08-01",
+            "year": 1996,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 29080.0,
+            "arrivals_smoothed": 29080.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-09-01",
+            "year": 1996,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 32181.0,
+            "arrivals_smoothed": 32181.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-10-01",
+            "year": 1996,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 47314.0,
+            "arrivals_smoothed": 47314.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-11-01",
+            "year": 1996,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 37650.0,
+            "arrivals_smoothed": 37650.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1996-12-01",
+            "year": 1996,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 34998.0,
+            "arrivals_smoothed": 34998.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-01-01",
+            "year": 1997,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 25585.0,
+            "arrivals_smoothed": 25585.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-02-01",
+            "year": 1997,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 32861.0,
+            "arrivals_smoothed": 32861.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-03-01",
+            "year": 1997,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 43177.0,
+            "arrivals_smoothed": 43177.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-04-01",
+            "year": 1997,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 35229.0,
+            "arrivals_smoothed": 35229.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-05-01",
+            "year": 1997,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 33456.0,
+            "arrivals_smoothed": 33456.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-06-01",
+            "year": 1997,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 26367.0,
+            "arrivals_smoothed": 26367.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-07-01",
+            "year": 1997,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 26091.0,
+            "arrivals_smoothed": 26091.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-08-01",
+            "year": 1997,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 35549.0,
+            "arrivals_smoothed": 35549.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-09-01",
+            "year": 1997,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 31981.0,
+            "arrivals_smoothed": 31981.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-10-01",
+            "year": 1997,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 56272.0,
+            "arrivals_smoothed": 56272.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-11-01",
+            "year": 1997,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 40173.0,
+            "arrivals_smoothed": 40173.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1997-12-01",
+            "year": 1997,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 35116.0,
+            "arrivals_smoothed": 35116.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-01-01",
+            "year": 1998,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 28822.0,
+            "arrivals_smoothed": 28822.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-02-01",
+            "year": 1998,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 37956.0,
+            "arrivals_smoothed": 37956.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-03-01",
+            "year": 1998,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 41338.0,
+            "arrivals_smoothed": 41338.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-04-01",
+            "year": 1998,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 41087.0,
+            "arrivals_smoothed": 41087.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-05-01",
+            "year": 1998,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 35814.0,
+            "arrivals_smoothed": 35814.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-06-01",
+            "year": 1998,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 29181.0,
+            "arrivals_smoothed": 29181.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-07-01",
+            "year": 1998,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 27895.0,
+            "arrivals_smoothed": 27895.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-08-01",
+            "year": 1998,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 36174.0,
+            "arrivals_smoothed": 36174.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-09-01",
+            "year": 1998,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 39664.0,
+            "arrivals_smoothed": 39664.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-10-01",
+            "year": 1998,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 62487.0,
+            "arrivals_smoothed": 62487.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-11-01",
+            "year": 1998,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 47403.0,
+            "arrivals_smoothed": 47403.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1998-12-01",
+            "year": 1998,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 35863.0,
+            "arrivals_smoothed": 35863.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-01-01",
+            "year": 1999,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 29752.0,
+            "arrivals_smoothed": 29752.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-02-01",
+            "year": 1999,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 38134.0,
+            "arrivals_smoothed": 38134.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-03-01",
+            "year": 1999,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 46218.0,
+            "arrivals_smoothed": 46218.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-04-01",
+            "year": 1999,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 40774.0,
+            "arrivals_smoothed": 40774.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-05-01",
+            "year": 1999,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 42712.0,
+            "arrivals_smoothed": 42712.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-06-01",
+            "year": 1999,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 31049.0,
+            "arrivals_smoothed": 31049.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-07-01",
+            "year": 1999,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 27193.0,
+            "arrivals_smoothed": 27193.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-08-01",
+            "year": 1999,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 38449.0,
+            "arrivals_smoothed": 38449.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-09-01",
+            "year": 1999,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 44117.0,
+            "arrivals_smoothed": 44117.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-10-01",
+            "year": 1999,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 66543.0,
+            "arrivals_smoothed": 66543.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-11-01",
+            "year": 1999,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 48865.0,
+            "arrivals_smoothed": 48865.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "1999-12-01",
+            "year": 1999,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 37698.0,
+            "arrivals_smoothed": 37698.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-01-01",
+            "year": 2000,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 25307.0,
+            "arrivals_smoothed": 25307.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-02-01",
+            "year": 2000,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 38959.0,
+            "arrivals_smoothed": 38959.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-03-01",
+            "year": 2000,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 44944.0,
+            "arrivals_smoothed": 44944.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-04-01",
+            "year": 2000,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 43635.0,
+            "arrivals_smoothed": 43635.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-05-01",
+            "year": 2000,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 28363.0,
+            "arrivals_smoothed": 28363.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-06-01",
+            "year": 2000,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 26933.0,
+            "arrivals_smoothed": 26933.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-07-01",
+            "year": 2000,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 24480.0,
+            "arrivals_smoothed": 24480.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-08-01",
+            "year": 2000,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 34670.0,
+            "arrivals_smoothed": 34670.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-09-01",
+            "year": 2000,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 43523.0,
+            "arrivals_smoothed": 43523.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-10-01",
+            "year": 2000,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 59195.0,
+            "arrivals_smoothed": 59195.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-11-01",
+            "year": 2000,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 52993.0,
+            "arrivals_smoothed": 52993.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2000-12-01",
+            "year": 2000,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 40644.0,
+            "arrivals_smoothed": 40644.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-01-01",
+            "year": 2001,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 30454.0,
+            "arrivals_smoothed": 30454.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-02-01",
+            "year": 2001,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 38680.0,
+            "arrivals_smoothed": 38680.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-03-01",
+            "year": 2001,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 46709.0,
+            "arrivals_smoothed": 46709.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-04-01",
+            "year": 2001,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 39083.0,
+            "arrivals_smoothed": 39083.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-05-01",
+            "year": 2001,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 28345.0,
+            "arrivals_smoothed": 28345.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-06-01",
+            "year": 2001,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 13030.0,
+            "arrivals_smoothed": 13030.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-07-01",
+            "year": 2001,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 18329.0,
+            "arrivals_smoothed": 18329.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-08-01",
+            "year": 2001,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 25322.0,
+            "arrivals_smoothed": 25322.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-09-01",
+            "year": 2001,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 31170.0,
+            "arrivals_smoothed": 31170.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-10-01",
+            "year": 2001,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 41245.0,
+            "arrivals_smoothed": 41245.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-11-01",
+            "year": 2001,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 30282.0,
+            "arrivals_smoothed": 30282.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2001-12-01",
+            "year": 2001,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 18588.0,
+            "arrivals_smoothed": 18588.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-01-01",
+            "year": 2002,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 17176.0,
+            "arrivals_smoothed": 17176.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-02-01",
+            "year": 2002,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 20668.0,
+            "arrivals_smoothed": 20668.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-03-01",
+            "year": 2002,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 28815.0,
+            "arrivals_smoothed": 28815.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-04-01",
+            "year": 2002,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 21253.0,
+            "arrivals_smoothed": 21253.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-05-01",
+            "year": 2002,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 19887.0,
+            "arrivals_smoothed": 19887.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-06-01",
+            "year": 2002,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 17218.0,
+            "arrivals_smoothed": 17218.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-07-01",
+            "year": 2002,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 16621.0,
+            "arrivals_smoothed": 16621.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-08-01",
+            "year": 2002,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 21093.0,
+            "arrivals_smoothed": 21093.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-09-01",
+            "year": 2002,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 23752.0,
+            "arrivals_smoothed": 23752.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-10-01",
+            "year": 2002,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 35272.0,
+            "arrivals_smoothed": 35272.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-11-01",
+            "year": 2002,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 28723.0,
+            "arrivals_smoothed": 28723.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2002-12-01",
+            "year": 2002,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 24990.0,
+            "arrivals_smoothed": 24990.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-01-01",
+            "year": 2003,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 21215.0,
+            "arrivals_smoothed": 21215.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-02-01",
+            "year": 2003,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 24349.0,
+            "arrivals_smoothed": 24349.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-03-01",
+            "year": 2003,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 27737.0,
+            "arrivals_smoothed": 27737.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-04-01",
+            "year": 2003,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 25851.0,
+            "arrivals_smoothed": 25851.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-05-01",
+            "year": 2003,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 22704.0,
+            "arrivals_smoothed": 22704.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-06-01",
+            "year": 2003,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 20351.0,
+            "arrivals_smoothed": 20351.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-07-01",
+            "year": 2003,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 22661.0,
+            "arrivals_smoothed": 22661.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-08-01",
+            "year": 2003,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 27568.0,
+            "arrivals_smoothed": 27568.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-09-01",
+            "year": 2003,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 28724.0,
+            "arrivals_smoothed": 28724.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-10-01",
+            "year": 2003,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 45459.0,
+            "arrivals_smoothed": 45459.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-11-01",
+            "year": 2003,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 38398.0,
+            "arrivals_smoothed": 38398.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2003-12-01",
+            "year": 2003,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 33115.0,
+            "arrivals_smoothed": 33115.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-01-01",
+            "year": 2004,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 30988.0,
+            "arrivals_smoothed": 30988.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-02-01",
+            "year": 2004,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 35631.0,
+            "arrivals_smoothed": 35631.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-03-01",
+            "year": 2004,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 44290.0,
+            "arrivals_smoothed": 44290.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-04-01",
+            "year": 2004,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 33514.0,
+            "arrivals_smoothed": 33514.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-05-01",
+            "year": 2004,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 26802.0,
+            "arrivals_smoothed": 26802.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-06-01",
+            "year": 2004,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 19793.0,
+            "arrivals_smoothed": 19793.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-07-01",
+            "year": 2004,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 24860.0,
+            "arrivals_smoothed": 24860.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-08-01",
+            "year": 2004,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 33162.0,
+            "arrivals_smoothed": 33162.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-09-01",
+            "year": 2004,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 25496.0,
+            "arrivals_smoothed": 25496.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-10-01",
+            "year": 2004,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 43373.0,
+            "arrivals_smoothed": 43373.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-11-01",
+            "year": 2004,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 36381.0,
+            "arrivals_smoothed": 36381.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2004-12-01",
+            "year": 2004,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 31007.0,
+            "arrivals_smoothed": 31007.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-01-01",
+            "year": 2005,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 25477.0,
+            "arrivals_smoothed": 25477.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-02-01",
+            "year": 2005,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 20338.0,
+            "arrivals_smoothed": 20338.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-03-01",
+            "year": 2005,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 29875.0,
+            "arrivals_smoothed": 29875.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-04-01",
+            "year": 2005,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 23414.0,
+            "arrivals_smoothed": 23414.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-05-01",
+            "year": 2005,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 25541.0,
+            "arrivals_smoothed": 25541.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-06-01",
+            "year": 2005,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 22608.0,
+            "arrivals_smoothed": 22608.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-07-01",
+            "year": 2005,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 23996.0,
+            "arrivals_smoothed": 23996.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-08-01",
+            "year": 2005,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 36910.0,
+            "arrivals_smoothed": 36910.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-09-01",
+            "year": 2005,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 36066.0,
+            "arrivals_smoothed": 36066.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-10-01",
+            "year": 2005,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 51498.0,
+            "arrivals_smoothed": 51498.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-11-01",
+            "year": 2005,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 41505.0,
+            "arrivals_smoothed": 41505.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2005-12-01",
+            "year": 2005,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 38170.0,
+            "arrivals_smoothed": 38170.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-01-01",
+            "year": 2006,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 28769.0,
+            "arrivals_smoothed": 28769.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-02-01",
+            "year": 2006,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 25728.0,
+            "arrivals_smoothed": 25728.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-03-01",
+            "year": 2006,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 36873.0,
+            "arrivals_smoothed": 36873.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-04-01",
+            "year": 2006,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 21983.0,
+            "arrivals_smoothed": 21983.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-05-01",
+            "year": 2006,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 22870.0,
+            "arrivals_smoothed": 22870.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-06-01",
+            "year": 2006,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 26210.0,
+            "arrivals_smoothed": 26210.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-07-01",
+            "year": 2006,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 25183.0,
+            "arrivals_smoothed": 25183.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-08-01",
+            "year": 2006,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 33150.0,
+            "arrivals_smoothed": 33150.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-09-01",
+            "year": 2006,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 33362.0,
+            "arrivals_smoothed": 33362.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-10-01",
+            "year": 2006,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 49670.0,
+            "arrivals_smoothed": 49670.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-11-01",
+            "year": 2006,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 44119.0,
+            "arrivals_smoothed": 44119.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2006-12-01",
+            "year": 2006,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 36009.0,
+            "arrivals_smoothed": 36009.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-01-01",
+            "year": 2007,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 33192.0,
+            "arrivals_smoothed": 33192.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-02-01",
+            "year": 2007,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 39934.0,
+            "arrivals_smoothed": 39934.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-03-01",
+            "year": 2007,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 54722.0,
+            "arrivals_smoothed": 54722.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-04-01",
+            "year": 2007,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 40942.0,
+            "arrivals_smoothed": 40942.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-05-01",
+            "year": 2007,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 35854.0,
+            "arrivals_smoothed": 35854.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-06-01",
+            "year": 2007,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 31316.0,
+            "arrivals_smoothed": 31316.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-07-01",
+            "year": 2007,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 35437.0,
+            "arrivals_smoothed": 35437.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-08-01",
+            "year": 2007,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 44683.0,
+            "arrivals_smoothed": 44683.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-09-01",
+            "year": 2007,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 45552.0,
+            "arrivals_smoothed": 45552.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-10-01",
+            "year": 2007,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 70644.0,
+            "arrivals_smoothed": 70644.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-11-01",
+            "year": 2007,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 52273.0,
+            "arrivals_smoothed": 52273.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2007-12-01",
+            "year": 2007,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 42156.0,
+            "arrivals_smoothed": 42156.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-01-01",
+            "year": 2008,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 36913.0,
+            "arrivals_smoothed": 36913.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-02-01",
+            "year": 2008,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 46675.0,
+            "arrivals_smoothed": 46675.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-03-01",
+            "year": 2008,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 58735.0,
+            "arrivals_smoothed": 58735.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-04-01",
+            "year": 2008,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 38475.0,
+            "arrivals_smoothed": 38475.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-05-01",
+            "year": 2008,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 30410.0,
+            "arrivals_smoothed": 30410.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-06-01",
+            "year": 2008,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 24349.0,
+            "arrivals_smoothed": 24349.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-07-01",
+            "year": 2008,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 25427.0,
+            "arrivals_smoothed": 25427.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-08-01",
+            "year": 2008,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 40011.0,
+            "arrivals_smoothed": 40011.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-09-01",
+            "year": 2008,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 41622.0,
+            "arrivals_smoothed": 41622.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-10-01",
+            "year": 2008,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 66421.0,
+            "arrivals_smoothed": 66421.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-11-01",
+            "year": 2008,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 52399.0,
+            "arrivals_smoothed": 52399.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2008-12-01",
+            "year": 2008,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 38840.0,
+            "arrivals_smoothed": 38840.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-01-01",
+            "year": 2009,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 29278.0,
+            "arrivals_smoothed": 29278.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-02-01",
+            "year": 2009,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 40617.0,
+            "arrivals_smoothed": 40617.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-03-01",
+            "year": 2009,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 49567.0,
+            "arrivals_smoothed": 49567.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-04-01",
+            "year": 2009,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 43337.0,
+            "arrivals_smoothed": 43337.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-05-01",
+            "year": 2009,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 30037.0,
+            "arrivals_smoothed": 30037.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-06-01",
+            "year": 2009,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 31749.0,
+            "arrivals_smoothed": 31749.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-07-01",
+            "year": 2009,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 30432.0,
+            "arrivals_smoothed": 30432.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-08-01",
+            "year": 2009,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 44174.0,
+            "arrivals_smoothed": 44174.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-09-01",
+            "year": 2009,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 42771.0,
+            "arrivals_smoothed": 42771.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-10-01",
+            "year": 2009,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 72522.0,
+            "arrivals_smoothed": 72522.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-11-01",
+            "year": 2009,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 54423.0,
+            "arrivals_smoothed": 54423.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2009-12-01",
+            "year": 2009,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 41049.0,
+            "arrivals_smoothed": 41049.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-01-01",
+            "year": 2010,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 33645.0,
+            "arrivals_smoothed": 33645.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-02-01",
+            "year": 2010,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 49264.0,
+            "arrivals_smoothed": 49264.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-03-01",
+            "year": 2010,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 63058.0,
+            "arrivals_smoothed": 63058.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-04-01",
+            "year": 2010,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 45509.0,
+            "arrivals_smoothed": 45509.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-05-01",
+            "year": 2010,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 32542.0,
+            "arrivals_smoothed": 32542.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-06-01",
+            "year": 2010,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 33263.0,
+            "arrivals_smoothed": 33263.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-07-01",
+            "year": 2010,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 38991.0,
+            "arrivals_smoothed": 38991.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-08-01",
+            "year": 2010,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 54672.0,
+            "arrivals_smoothed": 54672.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-09-01",
+            "year": 2010,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 54848.0,
+            "arrivals_smoothed": 54848.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-10-01",
+            "year": 2010,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 79130.0,
+            "arrivals_smoothed": 79130.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-11-01",
+            "year": 2010,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 67537.0,
+            "arrivals_smoothed": 67537.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2010-12-01",
+            "year": 2010,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 50408.0,
+            "arrivals_smoothed": 50408.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-01-01",
+            "year": 2011,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 42622.0,
+            "arrivals_smoothed": 42622.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-02-01",
+            "year": 2011,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 56339.0,
+            "arrivals_smoothed": 56339.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-03-01",
+            "year": 2011,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 67565.0,
+            "arrivals_smoothed": 67565.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-04-01",
+            "year": 2011,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 59751.0,
+            "arrivals_smoothed": 59751.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-05-01",
+            "year": 2011,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 46202.0,
+            "arrivals_smoothed": 46202.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-06-01",
+            "year": 2011,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 46115.0,
+            "arrivals_smoothed": 46115.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-07-01",
+            "year": 2011,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 42661.0,
+            "arrivals_smoothed": 42661.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-08-01",
+            "year": 2011,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 71398.0,
+            "arrivals_smoothed": 71398.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-09-01",
+            "year": 2011,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 63033.0,
+            "arrivals_smoothed": 63033.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-10-01",
+            "year": 2011,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 96996.0,
+            "arrivals_smoothed": 96996.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-11-01",
+            "year": 2011,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 83460.0,
+            "arrivals_smoothed": 83460.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2011-12-01",
+            "year": 2011,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 60073.0,
+            "arrivals_smoothed": 60073.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-01-01",
+            "year": 2012,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 52501.0,
+            "arrivals_smoothed": 52501.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-02-01",
+            "year": 2012,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 66459.0,
+            "arrivals_smoothed": 66459.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-03-01",
+            "year": 2012,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 89151.0,
+            "arrivals_smoothed": 89151.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-04-01",
+            "year": 2012,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 69796.0,
+            "arrivals_smoothed": 69796.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-05-01",
+            "year": 2012,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 50317.0,
+            "arrivals_smoothed": 50317.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-06-01",
+            "year": 2012,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 53630.0,
+            "arrivals_smoothed": 53630.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-07-01",
+            "year": 2012,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 49995.0,
+            "arrivals_smoothed": 49995.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-08-01",
+            "year": 2012,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 71964.0,
+            "arrivals_smoothed": 71964.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-09-01",
+            "year": 2012,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 66383.0,
+            "arrivals_smoothed": 66383.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-10-01",
+            "year": 2012,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 86379.0,
+            "arrivals_smoothed": 86379.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-11-01",
+            "year": 2012,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 83173.0,
+            "arrivals_smoothed": 83173.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2012-12-01",
+            "year": 2012,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 63344.0,
+            "arrivals_smoothed": 63344.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-01-01",
+            "year": 2013,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 47846.0,
+            "arrivals_smoothed": 47846.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-02-01",
+            "year": 2013,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 67264.0,
+            "arrivals_smoothed": 67264.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-03-01",
+            "year": 2013,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 88697.0,
+            "arrivals_smoothed": 88697.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-04-01",
+            "year": 2013,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 65152.0,
+            "arrivals_smoothed": 65152.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-05-01",
+            "year": 2013,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 52834.0,
+            "arrivals_smoothed": 52834.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-06-01",
+            "year": 2013,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 54599.0,
+            "arrivals_smoothed": 54599.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-07-01",
+            "year": 2013,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 54011.0,
+            "arrivals_smoothed": 54011.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-08-01",
+            "year": 2013,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 68478.0,
+            "arrivals_smoothed": 68478.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-09-01",
+            "year": 2013,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 66755.0,
+            "arrivals_smoothed": 66755.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-10-01",
+            "year": 2013,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 99426.0,
+            "arrivals_smoothed": 99426.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-11-01",
+            "year": 2013,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 75485.0,
+            "arrivals_smoothed": 75485.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2013-12-01",
+            "year": 2013,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 57069.0,
+            "arrivals_smoothed": 57069.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-01-01",
+            "year": 2014,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 70196.0,
+            "arrivals_smoothed": 70196.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-02-01",
+            "year": 2014,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 69009.0,
+            "arrivals_smoothed": 69009.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-03-01",
+            "year": 2014,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 79914.0,
+            "arrivals_smoothed": 79914.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-04-01",
+            "year": 2014,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 80053.0,
+            "arrivals_smoothed": 80053.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-05-01",
+            "year": 2014,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 62558.0,
+            "arrivals_smoothed": 62558.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-06-01",
+            "year": 2014,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 50731.0,
+            "arrivals_smoothed": 50731.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-07-01",
+            "year": 2014,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 46546.0,
+            "arrivals_smoothed": 46546.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-08-01",
+            "year": 2014,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 59761.0,
+            "arrivals_smoothed": 59761.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-09-01",
+            "year": 2014,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 52894.0,
+            "arrivals_smoothed": 52894.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-10-01",
+            "year": 2014,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 80993.0,
+            "arrivals_smoothed": 80993.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-11-01",
+            "year": 2014,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 76305.0,
+            "arrivals_smoothed": 76305.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2014-12-01",
+            "year": 2014,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 61158.0,
+            "arrivals_smoothed": 61158.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-01-01",
+            "year": 2015,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 38616.0,
+            "arrivals_smoothed": 38616.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-02-01",
+            "year": 2015,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 58523.0,
+            "arrivals_smoothed": 58523.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-03-01",
+            "year": 2015,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 79187.0,
+            "arrivals_smoothed": 79187.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-04-01",
+            "year": 2015,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 65729.0,
+            "arrivals_smoothed": 65729.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-05-01",
+            "year": 2015,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 17569.0,
+            "arrivals_smoothed": 17569.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-06-01",
+            "year": 2015,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 18368.0,
+            "arrivals_smoothed": 18368.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-07-01",
+            "year": 2015,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 22967.0,
+            "arrivals_smoothed": 22967.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-08-01",
+            "year": 2015,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 38606.0,
+            "arrivals_smoothed": 38606.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-09-01",
+            "year": 2015,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 39050.0,
+            "arrivals_smoothed": 39050.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-10-01",
+            "year": 2015,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 56584.0,
+            "arrivals_smoothed": 56584.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-11-01",
+            "year": 2015,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 58304.0,
+            "arrivals_smoothed": 58304.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2015-12-01",
+            "year": 2015,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 45467.0,
+            "arrivals_smoothed": 45467.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-01-01",
+            "year": 2016,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 42235.0,
+            "arrivals_smoothed": 42235.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-02-01",
+            "year": 2016,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 60821.0,
+            "arrivals_smoothed": 60821.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-03-01",
+            "year": 2016,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 76444.0,
+            "arrivals_smoothed": 76444.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-04-01",
+            "year": 2016,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 60214.0,
+            "arrivals_smoothed": 60214.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-05-01",
+            "year": 2016,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 46683.0,
+            "arrivals_smoothed": 46683.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-06-01",
+            "year": 2016,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 38852.0,
+            "arrivals_smoothed": 38852.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-07-01",
+            "year": 2016,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 48115.0,
+            "arrivals_smoothed": 48115.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-08-01",
+            "year": 2016,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 66341.0,
+            "arrivals_smoothed": 66341.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-09-01",
+            "year": 2016,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 74670.0,
+            "arrivals_smoothed": 74670.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-10-01",
+            "year": 2016,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 89281.0,
+            "arrivals_smoothed": 89281.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-11-01",
+            "year": 2016,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 72990.0,
+            "arrivals_smoothed": 72990.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2016-12-01",
+            "year": 2016,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 76356.0,
+            "arrivals_smoothed": 76356.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-01-01",
+            "year": 2017,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 62632.0,
+            "arrivals_smoothed": 62632.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-02-01",
+            "year": 2017,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 84061.0,
+            "arrivals_smoothed": 84061.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-03-01",
+            "year": 2017,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 106291.0,
+            "arrivals_smoothed": 106291.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-04-01",
+            "year": 2017,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 88591.0,
+            "arrivals_smoothed": 88591.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-05-01",
+            "year": 2017,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 62773.0,
+            "arrivals_smoothed": 62773.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-06-01",
+            "year": 2017,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 55956.0,
+            "arrivals_smoothed": 55956.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-07-01",
+            "year": 2017,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 42240.0,
+            "arrivals_smoothed": 42240.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-08-01",
+            "year": 2017,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 73778.0,
+            "arrivals_smoothed": 73778.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-09-01",
+            "year": 2017,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 68634.0,
+            "arrivals_smoothed": 68634.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-10-01",
+            "year": 2017,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 112492.0,
+            "arrivals_smoothed": 112492.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-11-01",
+            "year": 2017,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 99804.0,
+            "arrivals_smoothed": 99804.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2017-12-01",
+            "year": 2017,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 82966.0,
+            "arrivals_smoothed": 82966.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-01-01",
+            "year": 2018,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 73187.0,
+            "arrivals_smoothed": 73187.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-02-01",
+            "year": 2018,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 89507.0,
+            "arrivals_smoothed": 89507.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-03-01",
+            "year": 2018,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 124686.0,
+            "arrivals_smoothed": 124686.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-04-01",
+            "year": 2018,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 98650.0,
+            "arrivals_smoothed": 98650.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-05-01",
+            "year": 2018,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 68825.0,
+            "arrivals_smoothed": 68825.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-06-01",
+            "year": 2018,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 65159.0,
+            "arrivals_smoothed": 65159.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-07-01",
+            "year": 2018,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 73281.0,
+            "arrivals_smoothed": 73281.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-08-01",
+            "year": 2018,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 87679.0,
+            "arrivals_smoothed": 87679.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-09-01",
+            "year": 2018,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 91874.0,
+            "arrivals_smoothed": 91874.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-10-01",
+            "year": 2018,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 130745.0,
+            "arrivals_smoothed": 130745.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-11-01",
+            "year": 2018,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 147859.0,
+            "arrivals_smoothed": 97148.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2018-12-01",
+            "year": 2018,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 121620.0,
+            "arrivals_smoothed": 121620.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-01-01",
+            "year": 2019,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 81273.0,
+            "arrivals_smoothed": 81273.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-02-01",
+            "year": 2019,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 102423.0,
+            "arrivals_smoothed": 102423.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-03-01",
+            "year": 2019,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 127351.0,
+            "arrivals_smoothed": 127351.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-04-01",
+            "year": 2019,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 109399.0,
+            "arrivals_smoothed": 109399.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-05-01",
+            "year": 2019,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 78329.0,
+            "arrivals_smoothed": 78329.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-06-01",
+            "year": 2019,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 74883.0,
+            "arrivals_smoothed": 74883.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-07-01",
+            "year": 2019,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 70916.0,
+            "arrivals_smoothed": 70916.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-08-01",
+            "year": 2019,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 94749.0,
+            "arrivals_smoothed": 94749.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-09-01",
+            "year": 2019,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 92604.0,
+            "arrivals_smoothed": 92604.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-10-01",
+            "year": 2019,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 134096.0,
+            "arrivals_smoothed": 93676.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-11-01",
+            "year": 2019,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 130302.0,
+            "arrivals_smoothed": 130302.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2019-12-01",
+            "year": 2019,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 100866.0,
+            "arrivals_smoothed": 100866.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2020-01-01",
+            "year": 2020,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 79702.0,
+            "arrivals_smoothed": 79702.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2020-02-01",
+            "year": 2020,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 98190.0,
+            "arrivals_smoothed": 98190.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2020-03-01",
+            "year": 2020,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 42776.0,
+            "arrivals_smoothed": 42776.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2020-04-01",
+            "year": 2020,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 14.0,
+            "arrivals_smoothed": 14.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-05-01",
+            "year": 2020,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 31.0,
+            "arrivals_smoothed": 31.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-06-01",
+            "year": 2020,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 102.0,
+            "arrivals_smoothed": 102.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-07-01",
+            "year": 2020,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 196.0,
+            "arrivals_smoothed": 196.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-08-01",
+            "year": 2020,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 267.0,
+            "arrivals_smoothed": 267.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-09-01",
+            "year": 2020,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 584.0,
+            "arrivals_smoothed": 584.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-10-01",
+            "year": 2020,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 2025.0,
+            "arrivals_smoothed": 2025.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-11-01",
+            "year": 2020,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 1956.0,
+            "arrivals_smoothed": 1956.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2020-12-01",
+            "year": 2020,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 4242.0,
+            "arrivals_smoothed": 4242.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-01-01",
+            "year": 2021,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 8874.0,
+            "arrivals_smoothed": 8874.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-02-01",
+            "year": 2021,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 9266.0,
+            "arrivals_smoothed": 9266.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-03-01",
+            "year": 2021,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 15254.0,
+            "arrivals_smoothed": 15254.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-04-01",
+            "year": 2021,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 22732.0,
+            "arrivals_smoothed": 22732.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-05-01",
+            "year": 2021,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 1531.0,
+            "arrivals_smoothed": 1531.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-06-01",
+            "year": 2021,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 1187.0,
+            "arrivals_smoothed": 1187.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-07-01",
+            "year": 2021,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 3093.0,
+            "arrivals_smoothed": 3093.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-08-01",
+            "year": 2021,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 6093.0,
+            "arrivals_smoothed": 6093.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-09-01",
+            "year": 2021,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 9907.0,
+            "arrivals_smoothed": 9907.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-10-01",
+            "year": 2021,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 23338.0,
+            "arrivals_smoothed": 23338.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-11-01",
+            "year": 2021,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 26135.0,
+            "arrivals_smoothed": 26135.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2021-12-01",
+            "year": 2021,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 23552.0,
+            "arrivals_smoothed": 23552.0,
+            "covid_dummy": 1
+        },
+        {
+            "date": "2022-01-01",
+            "year": 2022,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 16975.0,
+            "arrivals_smoothed": 16975.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-02-01",
+            "year": 2022,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 19856.0,
+            "arrivals_smoothed": 19856.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-03-01",
+            "year": 2022,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 42152.0,
+            "arrivals_smoothed": 42152.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-04-01",
+            "year": 2022,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 61589.0,
+            "arrivals_smoothed": 61589.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-05-01",
+            "year": 2022,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 54093.0,
+            "arrivals_smoothed": 54093.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-06-01",
+            "year": 2022,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 46957.0,
+            "arrivals_smoothed": 46957.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-07-01",
+            "year": 2022,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 44462.0,
+            "arrivals_smoothed": 44462.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-08-01",
+            "year": 2022,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 41304.0,
+            "arrivals_smoothed": 41304.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-09-01",
+            "year": 2022,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 58314.0,
+            "arrivals_smoothed": 58314.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-10-01",
+            "year": 2022,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 88582.0,
+            "arrivals_smoothed": 88582.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-11-01",
+            "year": 2022,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 72653.0,
+            "arrivals_smoothed": 72653.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2022-12-01",
+            "year": 2022,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 67932.0,
+            "arrivals_smoothed": 67932.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-01-01",
+            "year": 2023,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 55074.0,
+            "arrivals_smoothed": 55074.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-02-01",
+            "year": 2023,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 73255.0,
+            "arrivals_smoothed": 73255.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-03-01",
+            "year": 2023,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 99426.0,
+            "arrivals_smoothed": 99426.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-04-01",
+            "year": 2023,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 98773.0,
+            "arrivals_smoothed": 98773.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-05-01",
+            "year": 2023,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 77703.0,
+            "arrivals_smoothed": 77703.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-06-01",
+            "year": 2023,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 72250.0,
+            "arrivals_smoothed": 72250.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-07-01",
+            "year": 2023,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 57726.0,
+            "arrivals_smoothed": 57726.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-08-01",
+            "year": 2023,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 67153.0,
+            "arrivals_smoothed": 67153.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-09-01",
+            "year": 2023,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 91012.0,
+            "arrivals_smoothed": 91012.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-10-01",
+            "year": 2023,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 117306.0,
+            "arrivals_smoothed": 117306.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-11-01",
+            "year": 2023,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 108630.0,
+            "arrivals_smoothed": 108630.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2023-12-01",
+            "year": 2023,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 96574.0,
+            "arrivals_smoothed": 96574.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-01-01",
+            "year": 2024,
+            "month": "Jan",
+            "month_number": 1,
+            "arrivals": 79101.0,
+            "arrivals_smoothed": 79101.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-02-01",
+            "year": 2024,
+            "month": "Feb",
+            "month_number": 2,
+            "arrivals": 97423.0,
+            "arrivals_smoothed": 97423.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-03-01",
+            "year": 2024,
+            "month": "Mar",
+            "month_number": 3,
+            "arrivals": 128167.0,
+            "arrivals_smoothed": 128167.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-04-01",
+            "year": 2024,
+            "month": "Apr",
+            "month_number": 4,
+            "arrivals": 111382.0,
+            "arrivals_smoothed": 111382.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-05-01",
+            "year": 2024,
+            "month": "May",
+            "month_number": 5,
+            "arrivals": 90205.0,
+            "arrivals_smoothed": 90205.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-06-01",
+            "year": 2024,
+            "month": "Jun",
+            "month_number": 6,
+            "arrivals": 76733.0,
+            "arrivals_smoothed": 76733.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-07-01",
+            "year": 2024,
+            "month": "Jul",
+            "month_number": 7,
+            "arrivals": 64598.0,
+            "arrivals_smoothed": 64598.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-08-01",
+            "year": 2024,
+            "month": "Aug",
+            "month_number": 8,
+            "arrivals": 72717.0,
+            "arrivals_smoothed": 72717.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-09-01",
+            "year": 2024,
+            "month": "Sep",
+            "month_number": 9,
+            "arrivals": 96302.0,
+            "arrivals_smoothed": 96302.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-10-01",
+            "year": 2024,
+            "month": "Oct",
+            "month_number": 10,
+            "arrivals": 124391.0,
+            "arrivals_smoothed": 124391.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-11-01",
+            "year": 2024,
+            "month": "Nov",
+            "month_number": 11,
+            "arrivals": 114496.0,
+            "arrivals_smoothed": 114496.0,
+            "covid_dummy": 0
+        },
+        {
+            "date": "2024-12-01",
+            "year": 2024,
+            "month": "Dec",
+            "month_number": 12,
+            "arrivals": 92033.0,
+            "arrivals_smoothed": 92033.0,
+            "covid_dummy": 0
+        }
+    ]
+}

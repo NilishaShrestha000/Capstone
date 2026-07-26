@@ -1,0 +1,1556 @@
+{
+    "description": "Monthly arrival crowd intensity by year and month",
+    "months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ],
+    "data": [
+        {
+            "year": 1996,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 27886.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 29676.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 39336.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 36331.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 29728.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 26749.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 22684.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 29080.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 32181.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 47314.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 37650.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 34998.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 1997,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 25585.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 32861.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 43177.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 35229.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 33456.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 26367.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 26091.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 35549.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 31981.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 56272.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 40173.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 35116.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 1998,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 28822.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 37956.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 41338.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 41087.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 35814.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 29181.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 27895.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 36174.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 39664.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 62487.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 47403.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 35863.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 1999,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 29752.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 38134.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 46218.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 40774.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 42712.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 31049.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 27193.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 38449.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 44117.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 66543.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 48865.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 37698.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2000,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 25307.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 38959.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 44944.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 43635.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 28363.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 26933.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 24480.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 34670.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 43523.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 59195.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 52993.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 40644.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2001,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 30454.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 38680.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 46709.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 39083.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 28345.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 13030.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 18329.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 25322.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 31170.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 41245.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 30282.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 18588.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2002,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 17176.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 20668.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 28815.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 21253.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 19887.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 17218.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 16621.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 21093.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 23752.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 35272.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 28723.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 24990.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2003,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 21215.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 24349.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 27737.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 25851.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 22704.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 20351.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 22661.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 27568.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 28724.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 45459.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 38398.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 33115.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2004,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 30988.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 35631.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 44290.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 33514.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 26802.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 19793.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 24860.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 33162.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 25496.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 43373.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 36381.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 31007.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2005,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 25477.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 20338.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 29875.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 23414.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 25541.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 22608.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 23996.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 36910.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 36066.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 51498.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 41505.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 38170.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2006,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 28769.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 25728.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 36873.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 21983.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 22870.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 26210.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 25183.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 33150.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 33362.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 49670.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 44119.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 36009.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2007,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 33192.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 39934.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 54722.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 40942.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 35854.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 31316.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 35437.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 44683.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 45552.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 70644.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 52273.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 42156.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2008,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 36913.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 46675.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 58735.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 38475.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 30410.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 24349.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 25427.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 40011.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 41622.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 66421.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 52399.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 38840.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2009,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 29278.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 40617.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 49567.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 43337.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 30037.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 31749.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 30432.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 44174.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 42771.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 72522.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 54423.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 41049.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2010,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 33645.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 49264.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 63058.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 45509.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 32542.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 33263.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 38991.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 54672.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 54848.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 79130.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 67537.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 50408.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2011,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 42622.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 56339.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 67565.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 59751.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 46202.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 46115.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 42661.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 71398.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 63033.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 96996.0,
+                    "crowd_level": "Medium"
+                },
+                "Nov": {
+                    "value": 83460.0,
+                    "crowd_level": "Medium"
+                },
+                "Dec": {
+                    "value": 60073.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2012,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 52501.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 66459.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 89151.0,
+                    "crowd_level": "Medium"
+                },
+                "Apr": {
+                    "value": 69796.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 50317.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 53630.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 49995.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 71964.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 66383.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 86379.0,
+                    "crowd_level": "Medium"
+                },
+                "Nov": {
+                    "value": 83173.0,
+                    "crowd_level": "Medium"
+                },
+                "Dec": {
+                    "value": 63344.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2013,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 47846.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 67264.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 88697.0,
+                    "crowd_level": "Medium"
+                },
+                "Apr": {
+                    "value": 65152.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 52834.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 54599.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 54011.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 68478.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 66755.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 99426.0,
+                    "crowd_level": "Medium"
+                },
+                "Nov": {
+                    "value": 75485.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 57069.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2014,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 70196.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 69009.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 79914.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 80053.0,
+                    "crowd_level": "Medium"
+                },
+                "May": {
+                    "value": 62558.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 50731.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 46546.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 59761.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 52894.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 80993.0,
+                    "crowd_level": "Medium"
+                },
+                "Nov": {
+                    "value": 76305.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 61158.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2015,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 38616.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 58523.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 79187.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 65729.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 17569.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 18368.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 22967.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 38606.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 39050.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 56584.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 58304.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 45467.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2016,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 42235.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 60821.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 76444.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 60214.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 46683.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 38852.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 48115.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 66341.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 74670.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 89281.0,
+                    "crowd_level": "Medium"
+                },
+                "Nov": {
+                    "value": 72990.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 76356.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2017,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 62632.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 84061.0,
+                    "crowd_level": "Medium"
+                },
+                "Mar": {
+                    "value": 106291.0,
+                    "crowd_level": "Medium"
+                },
+                "Apr": {
+                    "value": 88591.0,
+                    "crowd_level": "Medium"
+                },
+                "May": {
+                    "value": 62773.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 55956.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 42240.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 73778.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 68634.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 112492.0,
+                    "crowd_level": "High"
+                },
+                "Nov": {
+                    "value": 99804.0,
+                    "crowd_level": "Medium"
+                },
+                "Dec": {
+                    "value": 82966.0,
+                    "crowd_level": "Medium"
+                }
+            }
+        },
+        {
+            "year": 2018,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 73187.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 89507.0,
+                    "crowd_level": "Medium"
+                },
+                "Mar": {
+                    "value": 124686.0,
+                    "crowd_level": "High"
+                },
+                "Apr": {
+                    "value": 98650.0,
+                    "crowd_level": "Medium"
+                },
+                "May": {
+                    "value": 68825.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 65159.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 73281.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 87679.0,
+                    "crowd_level": "Medium"
+                },
+                "Sep": {
+                    "value": 91874.0,
+                    "crowd_level": "Medium"
+                },
+                "Oct": {
+                    "value": 130745.0,
+                    "crowd_level": "High"
+                },
+                "Nov": {
+                    "value": 147859.0,
+                    "crowd_level": "High"
+                },
+                "Dec": {
+                    "value": 121620.0,
+                    "crowd_level": "High"
+                }
+            }
+        },
+        {
+            "year": 2019,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 81273.0,
+                    "crowd_level": "Medium"
+                },
+                "Feb": {
+                    "value": 102423.0,
+                    "crowd_level": "Medium"
+                },
+                "Mar": {
+                    "value": 127351.0,
+                    "crowd_level": "High"
+                },
+                "Apr": {
+                    "value": 109399.0,
+                    "crowd_level": "Medium"
+                },
+                "May": {
+                    "value": 78329.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 74883.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 70916.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 94749.0,
+                    "crowd_level": "Medium"
+                },
+                "Sep": {
+                    "value": 92604.0,
+                    "crowd_level": "Medium"
+                },
+                "Oct": {
+                    "value": 134096.0,
+                    "crowd_level": "High"
+                },
+                "Nov": {
+                    "value": 130302.0,
+                    "crowd_level": "High"
+                },
+                "Dec": {
+                    "value": 100866.0,
+                    "crowd_level": "Medium"
+                }
+            }
+        },
+        {
+            "year": 2020,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 79702.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 98190.0,
+                    "crowd_level": "Medium"
+                },
+                "Mar": {
+                    "value": 42776.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 14.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 31.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 102.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 196.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 267.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 584.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 2025.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 1956.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 4242.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2021,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 8874.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 9266.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 15254.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 22732.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 1531.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 1187.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 3093.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 6093.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 9907.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 23338.0,
+                    "crowd_level": "Normal"
+                },
+                "Nov": {
+                    "value": 26135.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 23552.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2022,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 16975.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 19856.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 42152.0,
+                    "crowd_level": "Normal"
+                },
+                "Apr": {
+                    "value": 61589.0,
+                    "crowd_level": "Normal"
+                },
+                "May": {
+                    "value": 54093.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 46957.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 44462.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 41304.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 58314.0,
+                    "crowd_level": "Normal"
+                },
+                "Oct": {
+                    "value": 88582.0,
+                    "crowd_level": "Medium"
+                },
+                "Nov": {
+                    "value": 72653.0,
+                    "crowd_level": "Normal"
+                },
+                "Dec": {
+                    "value": 67932.0,
+                    "crowd_level": "Normal"
+                }
+            }
+        },
+        {
+            "year": 2023,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 55074.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 73255.0,
+                    "crowd_level": "Normal"
+                },
+                "Mar": {
+                    "value": 99426.0,
+                    "crowd_level": "Medium"
+                },
+                "Apr": {
+                    "value": 98773.0,
+                    "crowd_level": "Medium"
+                },
+                "May": {
+                    "value": 77703.0,
+                    "crowd_level": "Normal"
+                },
+                "Jun": {
+                    "value": 72250.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 57726.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 67153.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 91012.0,
+                    "crowd_level": "Medium"
+                },
+                "Oct": {
+                    "value": 117306.0,
+                    "crowd_level": "High"
+                },
+                "Nov": {
+                    "value": 108630.0,
+                    "crowd_level": "Medium"
+                },
+                "Dec": {
+                    "value": 96574.0,
+                    "crowd_level": "Medium"
+                }
+            }
+        },
+        {
+            "year": 2024,
+            "monthly_arrivals": {
+                "Jan": {
+                    "value": 79101.0,
+                    "crowd_level": "Normal"
+                },
+                "Feb": {
+                    "value": 97423.0,
+                    "crowd_level": "Medium"
+                },
+                "Mar": {
+                    "value": 128167.0,
+                    "crowd_level": "High"
+                },
+                "Apr": {
+                    "value": 111382.0,
+                    "crowd_level": "High"
+                },
+                "May": {
+                    "value": 90205.0,
+                    "crowd_level": "Medium"
+                },
+                "Jun": {
+                    "value": 76733.0,
+                    "crowd_level": "Normal"
+                },
+                "Jul": {
+                    "value": 64598.0,
+                    "crowd_level": "Normal"
+                },
+                "Aug": {
+                    "value": 72717.0,
+                    "crowd_level": "Normal"
+                },
+                "Sep": {
+                    "value": 96302.0,
+                    "crowd_level": "Medium"
+                },
+                "Oct": {
+                    "value": 124391.0,
+                    "crowd_level": "High"
+                },
+                "Nov": {
+                    "value": 114496.0,
+                    "crowd_level": "High"
+                },
+                "Dec": {
+                    "value": 92033.0,
+                    "crowd_level": "Medium"
+                }
+            }
+        }
+    ]
+}

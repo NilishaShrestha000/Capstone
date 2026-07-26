@@ -1,0 +1,34 @@
+{
+    "test": "Augmented Dickey-Fuller (ADF)",
+    "significance_level": 0.05,
+    "rule": "p-value < 0.05 means STATIONARY",
+    "results": {
+        "original_series": {
+            "label": "Original Smoothed Series",
+            "adf_statistic": -3.6889,
+            "p_value": 0.004272,
+            "is_stationary": true,
+            "note": "Passes ADF test but visual trend present \u2014 d=1 still applied"
+        },
+        "first_differenced": {
+            "label": "First Differenced (d=1)",
+            "p_value": 0.001715,
+            "is_stationary": true
+        },
+        "seasonal_differenced": {
+            "label": "Seasonal Differenced (D=1, s=12)",
+            "p_value": 0.001668,
+            "is_stationary": true
+        },
+        "both_differenced": {
+            "label": "Seasonal + First Differenced (d=1, D=1)",
+            "p_value": 0.0,
+            "is_stationary": true
+        }
+    },
+    "decision": {
+        "d": 1,
+        "D": 1,
+        "s": 12
+    }
+}

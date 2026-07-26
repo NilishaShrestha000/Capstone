@@ -1,0 +1,12 @@
+ADD this line to server.js (with the other routes):
+
+const modelRoutes = require('./src/routes/modelRoutes');
+app.use('/api/models', modelRoutes);
+
+And add these endpoints to the root API index response:
+models: {
+  metadata:   'GET /api/models/metadata',
+  selected:   'GET /api/models/selected',
+  comparison: 'GET /api/models/comparison',
+  download:   'GET /api/models/download/:modelName (admin)',
+},

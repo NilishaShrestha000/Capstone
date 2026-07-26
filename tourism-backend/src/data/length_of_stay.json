@@ -1,0 +1,266 @@
+{
+    "description": "Average length of stay in days 1995-2024",
+    "data": [
+        {
+            "year": 1996,
+            "total_arrivals": 393613.0,
+            "avg_stay_days": 13.5,
+            "by_air_number": 343246.0,
+            "by_land_number": 50367.0,
+            "by_air_pct": 87.2,
+            "by_land_pct": 12.8
+        },
+        {
+            "year": 1997,
+            "total_arrivals": 421857.0,
+            "avg_stay_days": 10.49,
+            "by_air_number": 371145.0,
+            "by_land_number": 50712.0,
+            "by_air_pct": 88.0,
+            "by_land_pct": 12.0
+        },
+        {
+            "year": 1998,
+            "total_arrivals": 463684.0,
+            "avg_stay_days": 10.76,
+            "by_air_number": 398008.0,
+            "by_land_number": 65676.0,
+            "by_air_pct": 85.8,
+            "by_land_pct": 14.2
+        },
+        {
+            "year": 1999,
+            "total_arrivals": 491504.0,
+            "avg_stay_days": 12.28,
+            "by_air_number": 421243.0,
+            "by_land_number": 70261.0,
+            "by_air_pct": 85.7,
+            "by_land_pct": 14.3
+        },
+        {
+            "year": 2000,
+            "total_arrivals": 463646.0,
+            "avg_stay_days": 11.88,
+            "by_air_number": 376914.0,
+            "by_land_number": 86732.0,
+            "by_air_pct": 81.3,
+            "by_land_pct": 18.7
+        },
+        {
+            "year": 2001,
+            "total_arrivals": 361237.0,
+            "avg_stay_days": 11.93,
+            "by_air_number": 299514.0,
+            "by_land_number": 61723.0,
+            "by_air_pct": 82.9,
+            "by_land_pct": 17.1
+        },
+        {
+            "year": 2002,
+            "total_arrivals": 275468.0,
+            "avg_stay_days": 7.92,
+            "by_air_number": 218660.0,
+            "by_land_number": 56808.0,
+            "by_air_pct": 79.4,
+            "by_land_pct": 20.6
+        },
+        {
+            "year": 2003,
+            "total_arrivals": 338132.0,
+            "avg_stay_days": 9.6,
+            "by_air_number": 275438.0,
+            "by_land_number": 62694.0,
+            "by_air_pct": 81.5,
+            "by_land_pct": 18.5
+        },
+        {
+            "year": 2004,
+            "total_arrivals": 385297.0,
+            "avg_stay_days": 13.51,
+            "by_air_number": 297335.0,
+            "by_land_number": 87962.0,
+            "by_air_pct": 77.2,
+            "by_land_pct": 22.8
+        },
+        {
+            "year": 2005,
+            "total_arrivals": 375398.0,
+            "avg_stay_days": 9.09,
+            "by_air_number": 277346.0,
+            "by_land_number": 98052.0,
+            "by_air_pct": 73.9,
+            "by_land_pct": 26.1
+        },
+        {
+            "year": 2006,
+            "total_arrivals": 383926.0,
+            "avg_stay_days": 10.2,
+            "by_air_number": 283819.0,
+            "by_land_number": 100107.0,
+            "by_air_pct": 73.9,
+            "by_land_pct": 26.1
+        },
+        {
+            "year": 2007,
+            "total_arrivals": 526705.0,
+            "avg_stay_days": 11.96,
+            "by_air_number": 360713.0,
+            "by_land_number": 165992.0,
+            "by_air_pct": 68.5,
+            "by_land_pct": 31.5
+        },
+        {
+            "year": 2008,
+            "total_arrivals": 500277.0,
+            "avg_stay_days": 11.78,
+            "by_air_number": 374661.0,
+            "by_land_number": 125616.0,
+            "by_air_pct": 74.9,
+            "by_land_pct": 25.1
+        },
+        {
+            "year": 2009,
+            "total_arrivals": 509956.0,
+            "avg_stay_days": 11.32,
+            "by_air_number": 379322.0,
+            "by_land_number": 130634.0,
+            "by_air_pct": 74.4,
+            "by_land_pct": 25.6
+        },
+        {
+            "year": 2010,
+            "total_arrivals": 602867.0,
+            "avg_stay_days": 12.67,
+            "by_air_number": 448800.0,
+            "by_land_number": 154067.0,
+            "by_air_pct": 74.4,
+            "by_land_pct": 25.6
+        },
+        {
+            "year": 2011,
+            "total_arrivals": 736215.0,
+            "avg_stay_days": 13.12,
+            "by_air_number": 545221.0,
+            "by_land_number": 190994.0,
+            "by_air_pct": 74.1,
+            "by_land_pct": 25.9
+        },
+        {
+            "year": 2012,
+            "total_arrivals": 803092.0,
+            "avg_stay_days": 12.16,
+            "by_air_number": 598258.0,
+            "by_land_number": 204834.0,
+            "by_air_pct": 74.5,
+            "by_land_pct": 25.5
+        },
+        {
+            "year": 2013,
+            "total_arrivals": 797616.0,
+            "avg_stay_days": 12.6,
+            "by_air_number": 594848.0,
+            "by_land_number": 202768.0,
+            "by_air_pct": 74.6,
+            "by_land_pct": 25.4
+        },
+        {
+            "year": 2014,
+            "total_arrivals": 790118.0,
+            "avg_stay_days": 12.44,
+            "by_air_number": 585981.0,
+            "by_land_number": 204137.0,
+            "by_air_pct": 74.2,
+            "by_land_pct": 25.8
+        },
+        {
+            "year": 2015,
+            "total_arrivals": 538970.0,
+            "avg_stay_days": 13.16,
+            "by_air_number": 407412.0,
+            "by_land_number": 131558.0,
+            "by_air_pct": 75.6,
+            "by_land_pct": 24.4
+        },
+        {
+            "year": 2016,
+            "total_arrivals": 753002.0,
+            "avg_stay_days": 13.4,
+            "by_air_number": 572563.0,
+            "by_land_number": 180439.0,
+            "by_air_pct": 76.0,
+            "by_land_pct": 24.0
+        },
+        {
+            "year": 2017,
+            "total_arrivals": 940218.0,
+            "avg_stay_days": 12.6,
+            "by_air_number": 760577.0,
+            "by_land_number": 179641.0,
+            "by_air_pct": 81.0,
+            "by_land_pct": 19.0
+        },
+        {
+            "year": 2018,
+            "total_arrivals": 1173072.0,
+            "avg_stay_days": 12.4,
+            "by_air_number": 969287.0,
+            "by_land_number": 203785.0,
+            "by_air_pct": 82.6,
+            "by_land_pct": 17.4
+        },
+        {
+            "year": 2019,
+            "total_arrivals": 1197191.0,
+            "avg_stay_days": 12.7,
+            "by_air_number": 995884.0,
+            "by_land_number": 201307.0,
+            "by_air_pct": 83.2,
+            "by_land_pct": 16.8
+        },
+        {
+            "year": 2020,
+            "total_arrivals": 230085.0,
+            "avg_stay_days": 15.1,
+            "by_air_number": 183130.0,
+            "by_land_number": 46955.0,
+            "by_air_pct": 79.6,
+            "by_land_pct": 20.4
+        },
+        {
+            "year": 2021,
+            "total_arrivals": 150962.0,
+            "avg_stay_days": 15.5,
+            "by_air_number": 150625.0,
+            "by_land_number": 337.0,
+            "by_air_pct": 99.7,
+            "by_land_pct": 0.3
+        },
+        {
+            "year": 2022,
+            "total_arrivals": 614869.0,
+            "avg_stay_days": 13.1,
+            "by_air_number": 592631.0,
+            "by_land_number": 22238.0,
+            "by_air_pct": 96.4,
+            "by_land_pct": 3.6
+        },
+        {
+            "year": 2023,
+            "total_arrivals": 1014882.0,
+            "avg_stay_days": 13.2,
+            "by_air_number": 914270.0,
+            "by_land_number": 100612.0,
+            "by_air_pct": 90.1,
+            "by_land_pct": 9.9
+        },
+        {
+            "year": 2024,
+            "total_arrivals": 1147548.0,
+            "avg_stay_days": 13.3,
+            "by_air_number": 1023937.0,
+            "by_land_number": 123611.0,
+            "by_air_pct": 89.2,
+            "by_land_pct": 10.8
+        }
+    ]
+}

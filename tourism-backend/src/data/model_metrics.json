@@ -1,0 +1,30 @@
+{
+    "test_period": {
+        "start": "January 2023",
+        "end": "December 2024",
+        "months": 24
+    },
+    "models": {
+        "ARIMA": {
+            "order": "(2,1,2)",
+            "MAE": 18718.8,
+            "RMSE": 23537.48,
+            "MAPE": 18.56,
+            "ljung_box_pvalue": 0.0,
+            "residuals_random": false,
+            "description": "Baseline model \u2014 captures trend only, no seasonality"
+        },
+        "SARIMAX": {
+            "order": "(3,1,3)(1,1,0,12)",
+            "MAE": 12022.64,
+            "RMSE": 14885.99,
+            "MAPE": 13.75,
+            "ljung_box_pvalue": 0.2655,
+            "residuals_random": true,
+            "covid_dummy_included": true,
+            "description": "Primary model \u2014 handles seasonality and COVID-19 intervention"
+        }
+    },
+    "selected_model": "SARIMAX",
+    "selection_reason": "Lower error metrics, passes Ljung-Box residual test, handles seasonality and COVID-19 dummy variable"
+}
