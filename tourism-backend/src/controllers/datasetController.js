@@ -2,6 +2,7 @@ const fs   = require('fs');
 const csv  = require('csv-parser');
 const pool = require('../config/db');
 const path = require('path');
+const { loadJSON, isTablePopulated } = require('../utils/dataSource');
 
 // POST /api/dataset/upload  (protected)
 const uploadDataset = async (req, res) => {
@@ -104,25 +105,50 @@ const uploadDataset = async (req, res) => {
 // GET /api/dataset/info
 const getDatasetInfo = async (req, res) => {
   try {
-    const yearResult = await pool.query(
-      'SELECT MIN(year) AS min_year, MAX(year) AS max_year, COUNT(*) AS total_rows FROM "Analytics".monthly_arrivals'
-    );
-    const logResult = await pool.query(
-      'SELECT * FROM "Analytics".import_logs ORDER BY imported_at DESC LIMIT 5'
-    );
+    if (await isTablePopulated('monthly_arrivals')) {
+      const yearResult = await pool.query(
+        'SELECT MIN(year) AS min_year, MAX(year) AS max_year, COUNT(*) AS total_rows FROM "Analytics".monthly_arrivals'
+      );
+      let recentUploads = [];
+      try {
+        const logResult = await pool.query(
+          'SELECT * FROM "Analytics".import_logs ORDER BY imported_at DESC LIMIT 5'
+        );
+        recentUploads = logResult.rows;
+      } catch (logError) {
+        console.error('Could not read import_logs:', logError.message);
+      }
 
-    const stats = yearResult.rows[0];
+      const stats = yearResult.rows[0];
+
+      return res.status(200).json({
+        success: true,
+        source:  'database',
+        fileCount: recentUploads.length,
+        dataset_info: {
+          name:           'Nepal Tourism Statistics',
+          source:         'MoCTCA / Open Data Nepal',
+          years_covered:  `${stats.min_year}–${stats.max_year}`,
+          total_records:  Number(stats.total_rows),
+          recent_uploads: recentUploads,
+        },
+      });
+    }
+
+    // JSON fallback (DB/schema not populated yet)
+    const data = loadJSON('historical_monthly.json').data;
+    const years = data.map(r => r.year);
 
     res.status(200).json({
       success: true,
-      source:  'database',
-      fileCount: logResult.rows.length,
+      source:  'json',
+      fileCount: 0,
       dataset_info: {
         name:           'Nepal Tourism Statistics',
         source:         'MoCTCA / Open Data Nepal',
-        years_covered:  `${stats.min_year}–${stats.max_year}`,
-        total_records:  Number(stats.total_rows),
-        recent_uploads: logResult.rows,
+        years_covered:  `${Math.min(...years)}–${Math.max(...years)}`,
+        total_records:  data.length,
+        recent_uploads: [],
       },
     });
 

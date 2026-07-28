@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 224" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1e1e"/><stop offset="1" stop-color="#111111"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="224" fill="url(#bg2)"/>
+  <rect width="400" height="224" fill="url(#glow2)"/>
+  <!-- database cylinder -->
+  <g stroke="#f59e0b" stroke-width="3" fill="#1f2937">
+    <ellipse cx="185" cy="78" rx="48" ry="16"/>
+    <path d="M137 78 v70 a48 16 0 0 0 96 0 v-70" fill="#1f2937"/>
+  </g>
+  <path d="M137 108 a48 16 0 0 0 96 0" fill="none" stroke="#f59e0b" stroke-width="2.5" opacity="0.6"/>
+  <path d="M137 138 a48 16 0 0 0 96 0" fill="none" stroke="#f59e0b" stroke-width="2.5" opacity="0.6"/>
+  <!-- check badge -->
+  <circle cx="248" cy="150" r="30" fill="#22c55e"/>
+  <path d="M234 150 L244 161 L263 140" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

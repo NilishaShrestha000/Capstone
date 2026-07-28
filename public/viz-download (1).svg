@@ -1,0 +1,16 @@
+<svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#fdba74" stroke-width="1.8" stroke-opacity="0.8">
+  <line x1="70" y1="70" x2="150" y2="60"/><line x1="70" y1="70" x2="150" y2="120"/><line x1="70" y1="70" x2="150" y2="180"/>
+  <line x1="70" y1="140" x2="150" y2="60"/><line x1="70" y1="140" x2="150" y2="120"/><line x1="70" y1="140" x2="150" y2="180"/>
+  <line x1="70" y1="210" x2="150" y2="120"/><line x1="70" y1="210" x2="150" y2="180"/>
+  <line x1="150" y1="60" x2="230" y2="110"/><line x1="150" y1="120" x2="230" y2="110"/><line x1="150" y1="180" x2="230" y2="110"/>
+ </g>
+ <g fill="#f97316">
+  <circle cx="70" cy="70" r="7"/><circle cx="70" cy="140" r="7"/><circle cx="70" cy="210" r="7"/>
+  <circle cx="150" cy="60" r="7"/><circle cx="150" cy="120" r="7"/><circle cx="150" cy="180" r="7"/>
+  <circle cx="230" cy="110" r="9" fill="#ea580c"/>
+ </g>
+ <circle cx="222" cy="210" r="28" fill="#f59e0b"/>
+ <path d="M222 194 v24 M222 218 l-10 -10 M222 218 l10 -10" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+ <rect x="207" y="226" width="30" height="5" rx="2.5" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="gf" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.45"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></linearGradient>
+  <radialGradient id="rf" cx="0.62" cy="0.42" r="0.72"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.2"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+ </defs>
+ <rect width="300" height="280" fill="url(#rf)"/>
+ <g stroke="#f59e0b" stroke-opacity="0.12" stroke-width="1">
+  <line x1="24" y1="80" x2="292" y2="80"/><line x1="24" y1="140" x2="292" y2="140"/><line x1="24" y1="200" x2="292" y2="200"/>
+  <line x1="96" y1="34" x2="96" y2="240"/><line x1="168" y1="34" x2="168" y2="240"/><line x1="240" y1="34" x2="240" y2="240"/>
+ </g>
+ <path d="M28 205 L96 178 L150 190 L205 128 L205 245 L28 245 Z" fill="url(#af)"/>
+ <polyline points="28,205 96,178 150,190 205,128" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#gf)"/>
+ <polyline points="205,128 250,92 290,58" fill="none" stroke="#fcd34d" stroke-width="4.5" stroke-dasharray="8 8" stroke-linecap="round" filter="url(#gf)"/>
+ <circle cx="96" cy="178" r="5" fill="#f59e0b" filter="url(#gf)"/>
+ <circle cx="205" cy="128" r="5.5" fill="#f59e0b" filter="url(#gf)"/>
+ <circle cx="290" cy="58" r="6.5" fill="#fcd34d" filter="url(#gf)"/>
+</svg>

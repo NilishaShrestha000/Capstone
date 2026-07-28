@@ -1,5 +1,5 @@
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Chart as ChartJS, CategoryScale, LinearScale, PointElement,
   LineElement, Filler, Tooltip, Legend,
@@ -7,10 +7,10 @@ import {
 import { Line } from "react-chartjs-2";
 import { FaChartLine, FaBalanceScale } from "react-icons/fa";
 import { useTheme } from "../../auth/ThemeContext";
-import data from "../../data/historicaldata.json";
-import forecastData from "../../data/forecastdata.json";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
+
+const API_BASE = "http://localhost:5001";
 
 const style = {
   card: "bg-background text-foreground border border-gray-500/40 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-300",
@@ -55,9 +55,70 @@ function StatCard({ label, value, sub, subColor }) {
 const Comparison = () => {
   const { theme } = useTheme();
   const palette = usePalette(theme);
-  const { arrivalsByYear, monthlyArrivals } = data;
 
   const [historyRange, setHistoryRange] = useState(10);
+  const [arrivalsByYear, setArrivalsByYear] = useState([]);
+  const [monthlyArrivals, setMonthlyArrivals] = useState([]);
+  const [forecastData, setForecastData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadData() {
+      try {
+        const [annualRes, monthlyRes, forecastRes] = await Promise.all([
+          fetch(`${API_BASE}/api/tourism/annual`),
+          fetch(`${API_BASE}/api/tourism/monthly`),
+          fetch(`${API_BASE}/api/forecast/results`),
+        ]);
+        const [annualJson, monthlyJson, forecastJson] = await Promise.all([
+          annualRes.json(),
+          monthlyRes.json(),
+          forecastRes.json(),
+        ]);
+
+        if (cancelled) return;
+
+        if (!annualJson.success || !monthlyJson.success || !forecastJson.success) {
+          throw new Error("One or more endpoints returned an error");
+        }
+
+        // Wide-format monthly rows (one row per year, Jan..Dec columns) —
+        // the long-format API rows are grouped by year for the charts below.
+        const monthlyByYear = {};
+        monthlyJson.data.forEach((row) => {
+          if (!monthlyByYear[row.year]) monthlyByYear[row.year] = { year: row.year };
+          monthlyByYear[row.year][row.month] = row.arrivals;
+        });
+
+        // Reshape forecast rows to {label, year, forecast, upper, lower}
+        const forecasts = forecastJson.data.map((f) => ({
+          label: `${f.month} '${String(f.year).slice(2)}`,
+          year: f.year,
+          forecast: f.forecast,
+          upper: f.upper_95,
+          lower: f.lower_95,
+        }));
+
+        setArrivalsByYear(annualJson.data);
+        setMonthlyArrivals(Object.values(monthlyByYear).sort((a, b) => a.year - b.year));
+        setForecastData({
+          model: forecastJson.model_used,
+          annual_totals: forecastJson.annual_totals,
+          forecasts,
+        });
+      } catch (err) {
+        if (!cancelled) setError(err.message);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+
+    loadData();
+    return () => { cancelled = true; };
+  }, []);
 
   const forecastYears = useMemo(() => {
     if (!forecastData?.forecasts) return {};
@@ -67,7 +128,7 @@ const Comparison = () => {
       byYear[f.year].push(f);
     });
     return byYear;
-  }, []);
+  }, [forecastData]);
 
   const forecastYearKeys = useMemo(
     () => Object.keys(forecastYears).map(Number).sort((a, b) => a - b),
@@ -95,10 +156,20 @@ const Comparison = () => {
     },
   };
 
-  if (!forecastData?.forecasts?.length || forecastYearKeys.length === 0) {
+  if (loading) {
     return (
       <div className="bg-background text-foreground min-h-screen flex items-center justify-center">
-        <p className="text-sm text-red-400">No forecast data available.</p>
+        <p className="text-sm text-gray-400">Loading comparison data…</p>
+      </div>
+    );
+  }
+
+  if (error || !arrivalsByYear.length || !monthlyArrivals.length || !forecastData?.forecasts?.length || forecastYearKeys.length === 0) {
+    return (
+      <div className="bg-background text-foreground min-h-screen flex items-center justify-center">
+        <p className="text-sm text-red-400">
+          {error ? `Error loading comparison data: ${error}` : "No forecast data available."}
+        </p>
       </div>
     );
   }

@@ -1,7 +1,9 @@
 -- =========================================================
 -- Tourism Flow Analysis - PostgreSQL Schema
 -- Schema: Analytics
--- Run once to create all tables.
+-- Matches the columns queried by src/services/*.js and
+-- populated by src/scripts/seedDatabase.js + saveModels.js.
+-- Run once (in pgAdmin or psql) against the target database.
 -- =========================================================
 
 CREATE SCHEMA IF NOT EXISTS "Analytics";
@@ -9,40 +11,46 @@ CREATE SCHEMA IF NOT EXISTS "Analytics";
 CREATE TABLE IF NOT EXISTS "Analytics".annual_arrivals (
     id              SERIAL PRIMARY KEY,
     year            INTEGER   NOT NULL UNIQUE,
-    total           NUMERIC   NOT NULL,
     third_country   NUMERIC,
-    indian          NUMERIC,
+    india           NUMERIC,
+    total           NUMERIC   NOT NULL,
     pct_change      NUMERIC,
     created_at      TIMESTAMP DEFAULT NOW()
 );
 
-CREATE TABLE IF NOT EXISTS "Analytics".historical_monthly (
-    id                  SERIAL PRIMARY KEY,
-    date                DATE      NOT NULL,
-    year                INTEGER   NOT NULL,
-    month               VARCHAR(3) NOT NULL,
-    month_number        INTEGER   NOT NULL,
-    arrivals            NUMERIC   NOT NULL,
-    arrivals_smoothed   NUMERIC,
-    covid_dummy         INTEGER   DEFAULT 0,
-    created_at          TIMESTAMP DEFAULT NOW(),
-    UNIQUE(year, month_number)
+CREATE TABLE IF NOT EXISTS "Analytics".monthly_arrivals (
+    id              SERIAL PRIMARY KEY,
+    year            INTEGER   NOT NULL UNIQUE,
+    jan             NUMERIC,
+    feb             NUMERIC,
+    mar             NUMERIC,
+    apr             NUMERIC,
+    may             NUMERIC,
+    jun             NUMERIC,
+    jul             NUMERIC,
+    aug             NUMERIC,
+    sep             NUMERIC,
+    oct             NUMERIC,
+    nov             NUMERIC,
+    "dec"           NUMERIC,
+    total           NUMERIC,
+    covid_dummy     INTEGER   DEFAULT 0,
+    created_at      TIMESTAMP DEFAULT NOW()
 );
 
 CREATE TABLE IF NOT EXISTS "Analytics".forecast_results (
-    id              SERIAL PRIMARY KEY,
-    date            DATE      NOT NULL,
-    year            INTEGER   NOT NULL,
-    month           VARCHAR(3) NOT NULL,
-    month_number    INTEGER   NOT NULL,
-    forecast        NUMERIC   NOT NULL,
-    lower_95        NUMERIC,
-    upper_95        NUMERIC,
-    crowd_level     VARCHAR(20),
-    model_used      VARCHAR(50) DEFAULT 'SARIMAX',
-    model_order     VARCHAR(50),
-    created_at      TIMESTAMP DEFAULT NOW(),
-    UNIQUE(year, month_number)
+    forecast_id         SERIAL PRIMARY KEY,
+    forecast_year       INTEGER     NOT NULL,
+    forecast_month      INTEGER     NOT NULL,
+    predicted_arrivals  NUMERIC     NOT NULL,
+    lower_bound         NUMERIC,
+    upper_bound         NUMERIC,
+    model_type          VARCHAR(50),
+    forecast_date       DATE GENERATED ALWAYS AS (
+                            make_date(forecast_year, forecast_month, 1)
+                        ) STORED,
+    created_at          TIMESTAMP DEFAULT NOW(),
+    UNIQUE(forecast_year, forecast_month)
 );
 
 CREATE TABLE IF NOT EXISTS "Analytics".purpose_of_visit (
@@ -50,8 +58,8 @@ CREATE TABLE IF NOT EXISTS "Analytics".purpose_of_visit (
     year            INTEGER   NOT NULL UNIQUE,
     holiday         NUMERIC,
     trekking        NUMERIC,
-    pilgrimage      NUMERIC,
     business        NUMERIC,
+    pilgrimage      NUMERIC,
     official        NUMERIC,
     conference      NUMERIC,
     others          NUMERIC,
@@ -62,58 +70,59 @@ CREATE TABLE IF NOT EXISTS "Analytics".purpose_of_visit (
 CREATE TABLE IF NOT EXISTS "Analytics".length_of_stay (
     id              SERIAL PRIMARY KEY,
     year            INTEGER   NOT NULL UNIQUE,
-    total_arrivals  NUMERIC,
-    avg_stay_days   NUMERIC,
+    total           NUMERIC,
+    growth_rate     NUMERIC,
     by_air_number   NUMERIC,
-    by_land_number  NUMERIC,
     by_air_pct      NUMERIC,
+    by_land_number  NUMERIC,
     by_land_pct     NUMERIC,
+    avg_stay_days   NUMERIC,
     created_at      TIMESTAMP DEFAULT NOW()
 );
 
-CREATE TABLE IF NOT EXISTS "Analytics".model_metrics (
-    id                   SERIAL PRIMARY KEY,
-    model_name           VARCHAR(50)  NOT NULL UNIQUE,
-    model_order          VARCHAR(50),
-    mae                  NUMERIC,
-    rmse                 NUMERIC,
-    mape                 NUMERIC,
-    ljung_box_pvalue     NUMERIC,
-    residuals_random     BOOLEAN,
-    covid_dummy_included BOOLEAN     DEFAULT FALSE,
-    description          TEXT,
-    is_selected          BOOLEAN     DEFAULT FALSE,
-    created_at           TIMESTAMP   DEFAULT NOW()
-);
-
-CREATE TABLE IF NOT EXISTS "Analytics".stationarity_results (
-    id              SERIAL PRIMARY KEY,
-    test_name       VARCHAR(100) NOT NULL,
-    series_label    VARCHAR(100) NOT NULL,
-    adf_statistic   NUMERIC,
-    p_value         NUMERIC,
-    is_stationary   BOOLEAN,
-    note            TEXT,
+CREATE TABLE IF NOT EXISTS "Analytics".model_evaluation (
+    evaluation_id   SERIAL PRIMARY KEY,
+    model_name      VARCHAR(50) NOT NULL,
+    rmse            NUMERIC,
+    mae             NUMERIC,
+    mape            NUMERIC,
+    forecast_id     INTEGER REFERENCES "Analytics".forecast_results(forecast_id),
     created_at      TIMESTAMP DEFAULT NOW()
 );
 
-CREATE TABLE IF NOT EXISTS "Analytics".outlier_detection (
-    id              SERIAL PRIMARY KEY,
-    date            DATE      NOT NULL,
-    month_year      VARCHAR(50),
-    original_value  NUMERIC,
-    replaced_with   NUMERIC,
-    z_score         NUMERIC,
-    created_at      TIMESTAMP DEFAULT NOW()
+CREATE TABLE IF NOT EXISTS "Analytics".import_logs (
+    log_id              SERIAL PRIMARY KEY,
+    file_name           VARCHAR(255),
+    imported_at         TIMESTAMP DEFAULT NOW(),
+    status              VARCHAR(20),
+    records_imported    INTEGER
 );
 
-CREATE TABLE IF NOT EXISTS "Analytics".heatmap_data (
-    id              SERIAL PRIMARY KEY,
-    year            INTEGER   NOT NULL,
-    month           VARCHAR(3) NOT NULL,
-    month_number    INTEGER   NOT NULL,
-    arrivals        NUMERIC,
-    crowd_level     VARCHAR(20),
+-- Table to store trained model binary (pkl) + metadata
+CREATE TABLE IF NOT EXISTS "Analytics".trained_models (
+    model_id        SERIAL PRIMARY KEY,
+    model_name      VARCHAR(20)  NOT NULL UNIQUE,  -- 'ARIMA' or 'SARIMAX'
+    model_class     VARCHAR(100) NOT NULL,
+    model_order     VARCHAR(30),
+    seasonal_order  VARCHAR(30),
+    aic             NUMERIC,
+    bic             NUMERIC,
+    mse             NUMERIC,
+    mae             NUMERIC,
+    nobs            INTEGER,
+    trained_start   DATE,
+    trained_end     DATE,
+    has_exog        BOOLEAN DEFAULT FALSE,
+    is_selected     BOOLEAN DEFAULT FALSE,
+    model_binary    BYTEA NOT NULL,               -- the actual .pkl file stored as bytes
     created_at      TIMESTAMP DEFAULT NOW(),
-    UNIQUE(year, month_number)
+    updated_at      TIMESTAMP DEFAULT NOW()
 );
+
+COMMENT ON COLUMN "Analytics".trained_models.model_binary IS
+  'Binary content of the .pkl file serialized with Python pickle';
+COMMENT ON COLUMN "Analytics".trained_models.is_selected IS
+  'TRUE for the model currently used for production forecasting (SARIMAX)';
+
+-- No DB table for stationarity_results / outlier_detection — those two
+-- endpoints always read straight from the JSON files (see metricsService.js).

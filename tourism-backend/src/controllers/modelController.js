@@ -65,7 +65,8 @@ const downloadModel = async (req, res) => {
     res.send(binary);
 
   } catch (err) {
-    res.status(404).json({
+    const status = err.code === 'MODELS_NOT_AVAILABLE' ? 503 : 404;
+    res.status(status).json({
       success: false,
       message: err.message,
     });

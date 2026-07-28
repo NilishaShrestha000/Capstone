@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Playwright
+/playwright-report/
+/test-results/
+
+# DB backups (may contain credentials)
+tourism-backend/*.sql

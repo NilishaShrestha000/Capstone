@@ -72,6 +72,12 @@ async function getSelectedModel() {
 // ── Retrieve model binary (for Python re-loading) ──────────────────────────
 // Returns a Buffer containing the raw .pkl bytes
 async function getModelBinary(modelName) {
+  if (!(await isTablePopulated('trained_models'))) {
+    const err = new Error('Trained models are not available yet. Train and save models before downloading.');
+    err.code = 'MODELS_NOT_AVAILABLE';
+    throw err;
+  }
+
   const result = await pool.query(
     `SELECT model_binary FROM "Analytics".trained_models
      WHERE model_name = $1 LIMIT 1`,

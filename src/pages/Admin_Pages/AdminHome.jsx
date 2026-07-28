@@ -24,26 +24,47 @@ const IMG = (name) => `${import.meta.env.BASE_URL}${name}`;
 // Nepal photos from /public. Swap any filename to taste.
 const HERO_IMAGE = "nepal-meadow.jpg";
 const CARD_IMG = {
-  upload: "pokhara.png", // any image in /public
-  verify: "nepal-swing.jpg",
-  forecast: "nepal-waterfall.jpg",
-  download: "background.png",
+  upload: "viz-upload.svg", // glowing data-viz illustrations in /public
+  verify: "viz-verify.svg",
+  forecast: "viz-forecast.svg",
+  download: "viz-download.svg",
 };
 
-// Reusable scenic header for an action card
-const CardImage = ({ src, icon, arrow }) => (
-  <div className="relative h-28 overflow-hidden">
-    <img
-      src={IMG(src)}
-      alt=""
-      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-    <div className="absolute bottom-3 left-4 flex items-center justify-center w-10 h-10 rounded-xl bg-orange-400 text-white text-lg shadow-lg">
-      {icon}
+// subtle background visuals for the small stat cards
+const STAT_VIZ = {
+  records: "viz-forecast.svg",
+  years: "viz-upload.svg",
+  source: "viz-verify.svg",
+};
+
+// Dark action card: text on the left, glowing data-viz bleeding off the right.
+const CARD_BG = "#FFF3E6";
+const ActionCard = ({ img, icon, title, desc, arrow, children }) => (
+  <div
+    className="relative overflow-hidden flex items-stretch h-full min-h-[150px] rounded-2xl border border-gray-700/60 hover:border-orange-400/60 transition-all"
+    style={{ backgroundColor: CARD_BG }}
+  >
+    {/* data-viz on the right, bleeding to the edge */}
+    <div className="absolute inset-y-0 right-0 w-[52%]">
+      <img src={IMG(img)} alt="" className="w-full h-full object-cover" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(to right, ${CARD_BG} 8%, ${CARD_BG}b3 45%, transparent 100%)`,
+        }}
+      />
+    </div>
+    {/* text on the left */}
+    <div className="relative z-10 flex flex-col justify-center p-6 w-[62%]">
+      <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-orange-400 text-white text-lg shadow-lg mb-3">
+        {icon}
+      </div>
+      <h3 className="font-semibold text-lg mb-1 text-gray-900">{title}</h3>
+      <p className="text-sm text-gray-500">{desc}</p>
+      {children}
     </div>
     {arrow && (
-      <FaArrowRight className="absolute top-3 right-4 text-white/90 group-hover:translate-x-1 transition-all" />
+      <FaArrowRight className="absolute top-4 right-4 z-10 text-gray-400 group-hover:translate-x-1 transition-all" />
     )}
   </div>
 );
@@ -191,7 +212,7 @@ const AdminHome = () => {
     ? "opacity-100 translate-y-0"
     : "opacity-0 translate-y-3";
   const card =
-    "border border-gray-500/40 rounded-2xl p-6 hover:border-orange-400/40 transition-all";
+    "relative overflow-hidden border border-orange-200 rounded-2xl p-6 hover:border-orange-400/70 transition-all text-gray-900 bg-[#FFF3E6]";
 
   const fmt = (n) =>
     typeof n === "number" ? n.toLocaleString("en-US") : (n ?? "—");
@@ -243,11 +264,11 @@ const AdminHome = () => {
         >
           <div className="flex items-center gap-3">
             <FaCircle
-              className={`text-[10px] ${online ? "text-green-400 animate-pulse" : "text-red-400"}`}
+              className={`text-[10px] ${online ? "text-green-600 animate-pulse" : "text-red-400"}`}
             />
             <div>
               <p
-                className={`font-semibold text-sm ${online ? "text-green-400" : "text-red-400"}`}
+                className={`font-semibold text-sm ${online ? "text-green-600" : "text-red-400"}`}
               >
                 {loading
                   ? "Checking backend..."
@@ -275,7 +296,7 @@ const AdminHome = () => {
           <div
             className={`flex items-center gap-2 rounded-lg px-4 py-3 mb-6 text-sm border ${
               actionMsg.type === "success"
-                ? "bg-green-400/10 border-green-400/30 text-green-400"
+                ? "bg-green-400/10 border-green-400/30 text-green-600"
                 : "bg-red-400/10 border-red-400/30 text-red-400"
             }`}
           >
@@ -299,43 +320,64 @@ const AdminHome = () => {
             style={{ transitionDelay: "100ms" }}
             className={`${card} ${revealBase} ${revealState}`}
           >
-            <div className="flex items-center gap-2 text-orange-400 mb-3">
-              <FaFileAlt />
-              <span className="text-xs uppercase tracking-wider">
-                Total Records
-              </span>
+            <img
+              src={IMG(STAT_VIZ.records)}
+              alt=""
+              className="absolute -right-5 -bottom-5 w-36 opacity-70 pointer-events-none"
+            />
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-orange-400 mb-3">
+                <FaFileAlt />
+                <span className="text-xs uppercase tracking-wider">
+                  Total Records
+                </span>
+              </div>
+              <p className="text-3xl font-bold text-orange-400">
+                {online ? fmt(recordsCount) : "\u2014"}
+              </p>
             </div>
-            <p className="text-3xl font-bold text-orange-400">
-              {online ? fmt(recordsCount) : "—"}
-            </p>
           </div>
           <div
             style={{ transitionDelay: "150ms" }}
             className={`${card} ${revealBase} ${revealState}`}
           >
-            <div className="flex items-center gap-2 text-orange-400 mb-3">
-              <FaCalendarAlt />
-              <span className="text-xs uppercase tracking-wider">
-                Years Covered
-              </span>
+            <img
+              src={IMG(STAT_VIZ.years)}
+              alt=""
+              className="absolute -right-5 -bottom-5 w-36 opacity-70 pointer-events-none"
+            />
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-orange-400 mb-3">
+                <FaCalendarAlt />
+                <span className="text-xs uppercase tracking-wider">
+                  Years Covered
+                </span>
+              </div>
+              <p className="text-2xl font-bold text-orange-400">
+                {online ? ds?.years_covered || "\u2014" : "\u2014"}
+              </p>
             </div>
-            <p className="text-2xl font-bold">
-              {online ? ds?.years_covered || "—" : "—"}
-            </p>
           </div>
           <div
             style={{ transitionDelay: "200ms" }}
             className={`${card} ${revealBase} ${revealState}`}
           >
-            <div className="flex items-center gap-2 text-orange-400 mb-3">
-              <FaDatabase />
-              <span className="text-xs uppercase tracking-wider">
-                Data Source
-              </span>
+            <img
+              src={IMG(STAT_VIZ.source)}
+              alt=""
+              className="absolute -right-5 -bottom-5 w-36 opacity-70 pointer-events-none"
+            />
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-orange-400 mb-3">
+                <FaDatabase />
+                <span className="text-xs uppercase tracking-wider">
+                  Data Source
+                </span>
+              </div>
+              <p className="text-sm text-orange-400 break-words">
+                {online ? ds?.source || "\u2014" : "\u2014"}
+              </p>
             </div>
-            <p className="text-sm text-gray-400 break-words">
-              {online ? ds?.source || "—" : "—"}
-            </p>
           </div>
         </div>
 
@@ -361,7 +403,7 @@ const AdminHome = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-green-400 text-sm">
+                <div className="flex items-center gap-2 text-green-600 text-sm">
                   <FaTrophy />
                   <span>Selected</span>
                 </div>
@@ -383,8 +425,8 @@ const AdminHome = () => {
                         key={m.model_name}
                         className={`border-b border-gray-500/20 ${
                           m.is_selected
-                            ? "text-orange-400 font-semibold"
-                            : "text-foreground"
+                            ? "text-orange-600 font-semibold"
+                            : "text-gray-800"
                         }`}
                       >
                         <td className="py-2 pr-4">{m.model_name}</td>
@@ -393,7 +435,7 @@ const AdminHome = () => {
                         <td className="py-2 px-4">{m.mape?.toFixed(2)}%</td>
                         <td className="py-2 pl-4">
                           {m.is_selected ? (
-                            <span className="text-green-400">Selected</span>
+                            <span className="text-green-600">Selected</span>
                           ) : (
                             <span className="text-gray-400">Baseline</span>
                           )}
@@ -426,17 +468,14 @@ const AdminHome = () => {
             style={{ transitionDelay: "300ms" }}
             className={`${revealBase} ${revealState}`}
           >
-            <Link
-              to="/adminupload"
-              className="group block border border-gray-500/40 hover:border-orange-400 rounded-2xl overflow-hidden transition-colors h-full"
-            >
-              <CardImage src={CARD_IMG.upload} icon={<FaUpload />} arrow />
-              <div className="p-6 pt-4">
-                <h3 className="font-semibold text-lg mb-1">Upload Dataset</h3>
-                <p className="text-sm text-gray-400">
-                  Add a new tourism dataset in CSV or XLSX format.
-                </p>
-              </div>
+            <Link to="/adminupload" className="group block h-full">
+              <ActionCard
+                img={CARD_IMG.upload}
+                icon={<FaUpload />}
+                arrow
+                title="Upload Dataset"
+                desc="Add a new tourism dataset in CSV or XLSX format."
+              />
             </Link>
           </div>
 
@@ -445,21 +484,14 @@ const AdminHome = () => {
             style={{ transitionDelay: "350ms" }}
             className={`${revealBase} ${revealState}`}
           >
-            <Link
-              to="/adminverify"
-              className="group block border border-gray-500/40 hover:border-orange-400 rounded-2xl overflow-hidden transition-colors h-full"
-            >
-              <CardImage
-                src={CARD_IMG.verify}
+            <Link to="/adminverify" className="group block h-full">
+              <ActionCard
+                img={CARD_IMG.verify}
                 icon={<FaClipboardCheck />}
                 arrow
+                title="Verify Dataset"
+                desc="Confirm the latest upload was stored correctly."
               />
-              <div className="p-6 pt-4">
-                <h3 className="font-semibold text-lg mb-1">Verify Dataset</h3>
-                <p className="text-sm text-gray-400">
-                  Confirm the latest upload was stored correctly.
-                </p>
-              </div>
             </Link>
           </div>
 
@@ -471,22 +503,16 @@ const AdminHome = () => {
             <button
               onClick={triggerForecast}
               disabled={triggering}
-              className="group w-full text-left border border-gray-500/40 hover:border-orange-400 rounded-2xl overflow-hidden transition-colors h-full disabled:opacity-60"
+              className="group block w-full text-left h-full disabled:opacity-60"
             >
-              <CardImage
-                src={CARD_IMG.forecast}
+              <ActionCard
+                img={CARD_IMG.forecast}
                 icon={
                   <FaSyncAlt className={triggering ? "animate-spin" : ""} />
                 }
+                title={triggering ? "Re-running..." : "Re-run Forecast"}
+                desc="Trigger the SARIMAX model to regenerate forecasts."
               />
-              <div className="p-6 pt-4">
-                <h3 className="font-semibold text-lg mb-1">
-                  {triggering ? "Re-running..." : "Re-run Forecast"}
-                </h3>
-                <p className="text-sm text-gray-400">
-                  Trigger the SARIMAX model to regenerate forecasts.
-                </p>
-              </div>
             </button>
           </div>
 
@@ -495,27 +521,25 @@ const AdminHome = () => {
             style={{ transitionDelay: "450ms" }}
             className={`${revealBase} ${revealState}`}
           >
-            <div className="group border border-gray-500/40 hover:border-orange-400/40 rounded-2xl overflow-hidden transition-all h-full">
-              <CardImage src={CARD_IMG.download} icon={<FaDownload />} />
-              <div className="p-6 pt-4">
-                <h3 className="font-semibold text-lg mb-1">Download Model</h3>
-                <p className="text-sm text-gray-400 mb-4">
-                  Export a trained model as a .pkl file.
-                </p>
-                <div className="flex gap-2">
-                  {["SARIMAX", "ARIMA"].map((name) => (
-                    <button
-                      key={name}
-                      onClick={() => downloadModel(name)}
-                      disabled={downloading === name}
-                      className="flex-1 border border-orange-400/40 text-orange-400 hover:bg-orange-400/10 text-sm font-semibold py-2 rounded-lg transition-colors disabled:opacity-50"
-                    >
-                      {downloading === name ? "..." : name}
-                    </button>
-                  ))}
-                </div>
+            <ActionCard
+              img={CARD_IMG.download}
+              icon={<FaDownload />}
+              title="Download Model"
+              desc="Export a trained model as a .pkl file."
+            >
+              <div className="flex gap-2 mt-4">
+                {["SARIMAX", "ARIMA"].map((name) => (
+                  <button
+                    key={name}
+                    onClick={() => downloadModel(name)}
+                    disabled={downloading === name}
+                    className="flex-1 border border-orange-400/40 text-orange-400 hover:bg-orange-400/10 text-sm font-semibold py-2 rounded-lg transition-colors disabled:opacity-50"
+                  >
+                    {downloading === name ? "..." : name}
+                  </button>
+                ))}
               </div>
-            </div>
+            </ActionCard>
           </div>
         </div>
 
@@ -554,7 +578,7 @@ const AdminHome = () => {
                         <span
                           className={
                             (row.status || "").toLowerCase() === "success"
-                              ? "text-green-400"
+                              ? "text-green-600"
                               : "text-gray-400"
                           }
                         >
