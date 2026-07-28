@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
@@ -10,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = (jwtToken) => {
         localStorage.setItem("token", jwtToken);
-        setToken("token");
+        setToken(jwtToken); 
     };
 
     const logout = () => {
