@@ -333,6 +333,19 @@ const Comparison = () => {
           </div>
         </div>
 
+
+        {/* Yearly continuous timeline */}
+        <div className={style.card}>
+          <h2 className="font-semibold text-lg">Yearly Totals: Actual → Projected</h2>
+          <p className={style.subtext}>
+            The gray line is recorded history; the dashed orange line is the {model} model's
+            projection continuing from it.
+          </p>
+          <div style={{ height: 300 }}>
+            <Line data={yearlyTimelineData} options={baseOptions} />
+          </div>
+        </div>
+
         {/* Monthly continuous timeline: history flowing straight into forecast */}
         <div className={style.card}>
           <div className={style.sectionTitle}>
@@ -353,17 +366,7 @@ const Comparison = () => {
           </p>
         </div>
 
-        {/* Yearly continuous timeline */}
-        <div className={style.card}>
-          <h2 className="font-semibold text-lg">Yearly Totals: Actual → Projected</h2>
-          <p className={style.subtext}>
-            The gray line is recorded history; the dashed orange line is the {model} model's
-            projection continuing from it.
-          </p>
-          <div style={{ height: 300 }}>
-            <Line data={yearlyTimelineData} options={baseOptions} />
-          </div>
-        </div>
+
       </div>
     </div>
   );
